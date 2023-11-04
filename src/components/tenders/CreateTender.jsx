@@ -37,11 +37,6 @@ const CreateTender = () => {
         onChange={(e) => setTender({ ...tender, org: e.target.value })}
       />
       <input
-        type="text"
-        placeholder="Локация"
-        onChange={(e) => setTender({ ...tender, location: e.target.value })}
-      />
-      <input
         type="number"
         placeholder="Сумма"
         onChange={(e) => setTender({ ...tender, sum: e.target.value })}

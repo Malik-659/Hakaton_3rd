@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import headerImage from "../../assets/icons/headerImage.svg";
 import "../HomePage/HomePage.scss";
 import AboutUs from "../../assets/AboutUs.svg";
-import line from "../../assets/icons/line.svg";
+// import line from "../../assets/icons/line.svg";
 import "./HomePage.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
