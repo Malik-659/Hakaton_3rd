@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+import usersReducer from "./users/usersSlice";
 
 import tendersReducer from "./tenders/tendersSlice";
 
@@ -10,6 +11,7 @@ export default configureStore({
       serializableCheck: false,
     }),
   reducer: {
+    users: usersReducer,
     tenders: tendersReducer,
     comments: commentSlice
   },
