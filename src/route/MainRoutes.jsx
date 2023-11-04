@@ -10,7 +10,7 @@ const MainRoutes = () => {
   const ROUTES = [
     {
       id: 1,
-      path: "/",
+      path: "/map",
       element: <Map />,
     },
     {
@@ -25,7 +25,7 @@ const MainRoutes = () => {
     },
     {
       id: 4,
-      path: "/homepage",
+      path: "/",
       element: <HomePage />,
     },
     {
