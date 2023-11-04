@@ -5,8 +5,8 @@ const tendersSlice = createSlice({
   name: "tenders",
   initialState: {
     loading: false,
-    products: [],
-    oneProduct: null,
+    tenders: [],
+    oneTender: null,
     currentPage: 1,
     totalPages: 1,
     currentCategory: "",
@@ -15,13 +15,13 @@ const tendersSlice = createSlice({
   },
   reducers: {
     clearOneTenderState: (state) => {
-      state.oneProduct = null;
+      state.oneTender = null;
     },
     changePage: (state, action) => {
       state.currentPage = action.payload.page;
     },
     changeCategory: (state, action) => {
-      if (action.payload.category === "all") {
+      if (action.payload.category === "Все") {
         state.currentCategory = "";
       } else {
         state.currentCategory = action.payload.category;
@@ -40,7 +40,7 @@ const tendersSlice = createSlice({
       })
       .addCase(getTenders.fulfilled, (state, action) => {
         state.loading = false;
-        state.products = action.payload.data;
+        state.tenders = action.payload.data;
         state.totalPages = action.payload.totalPages;
       })
       .addCase(getTenders.rejected, (state) => {
@@ -51,7 +51,7 @@ const tendersSlice = createSlice({
       })
       .addCase(getOneTender.fulfilled, (state, action) => {
         state.loading = false;
-        state.oneProduct = action.payload;
+        state.oneTender = action.payload;
       })
       .addCase(getOneTender.rejected, (state) => {
         state.loading = false;
