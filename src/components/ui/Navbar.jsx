@@ -10,7 +10,7 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
-import logo from "../../assets/icons/584830d9cef1014c0b5e4a9f.png";
+import logo from "../../assets/icons/logo.png";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSidebar } from "../../store/comments/commentSlice";
 import Sidebar from "./Sidebar";
@@ -65,7 +65,7 @@ const Navbar = () => {
       <Box sx={{ flexGrow: 1 }}>
         <AppBar
           position="static"
-          sx={{ background: "#e7fafd", color: "black" }}
+          sx={{ background: "#b6f2fb", color: "black" }}
         >
           <Toolbar>
             <React.Fragment>
@@ -85,21 +85,19 @@ const Navbar = () => {
                 <Sidebar />
               </Drawer>
             </React.Fragment>
-            <img className="w-10 h-10 mr-4" src={logo} alt="logo" />
+            <img className="w-36 h-18 mr-4" src={logo} alt="logo" />
             <Typography
               variant="h6"
               noWrap
               component="div"
               sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-            >
-              Redux
-            </Typography>
+            ></Typography>
             <Search
               sx={{
-                background: "#f5ffc9",
+                background: "#e4e4e4",
                 transition: "background-color 0.3s",
                 "&:hover": {
-                  background: "#eefc8e ",
+                  background: "#c4c4c4 ",
                 },
               }}
             >
