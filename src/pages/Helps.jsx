@@ -5,8 +5,8 @@ import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 
 const Helps = () => {
   const [show, setShow] = useState(false);
-  const [show2, setShow2] = useState(false)
-  const [show3, setShow3] = useState(false)
+  const [show2, setShow2] = useState(false);
+  const [show3, setShow3] = useState(false);
 
   return (
     <div className="w-full h-screen flex justify-center">
@@ -18,11 +18,14 @@ const Helps = () => {
         </p>
         <div>
           <div className="flex justify-end mb-8 ">
-            <button 
-            onClick={() => {setShow(!show) 
-                setShow2(!show2)
-            setShow3(!show3)}}
-            className="w-32 h-8 bg-blue-400 rounded-xl">
+            <button
+              onClick={() => {
+                setShow(!show);
+                setShow2(!show2);
+                setShow3(!show3);
+              }}
+              className="w-32 h-8 bg-blue-400 rounded-xl"
+            >
               расскрыть все
             </button>
           </div>
@@ -30,45 +33,55 @@ const Helps = () => {
             <BsArrowRightSquareFill className="w-8 h-8" />
             <p>Есть Проблема?</p>
             {show ? (
-                <IoMdArrowDropup onClick={() => setShow(false)}/>
-                ) : (
-                <IoMdArrowDropdown onClick={() => setShow(true)}/>
-                )}
+              <IoMdArrowDropup onClick={() => setShow(false)} />
+            ) : (
+              <IoMdArrowDropdown onClick={() => setShow(true)} />
+            )}
           </div>
           {show && (
             <ul className="mt-8 text-blue-700">
-              <li><a href="">Создайте учетную запись или войдите в систему</a></li>
-              <li><a href="">Сообщить о технической проблеме (баг, навигация ...)</a></li>
+              <li>
+                <a href="">Создайте учетную запись или войдите в систему</a>
+              </li>
+              <li>
+                <a href="">
+                  Сообщить о технической проблеме (баг, навигация ...)
+                </a>
+              </li>
             </ul>
           )}
           <div className="flex items-center justify-between mt-8">
             <BsArrowRightSquareFill className="w-8 h-8" />
             <p>Есть Предложение по сайту?</p>
             {show2 ? (
-                <IoMdArrowDropup onClick={() => setShow2(false)} />
-                ) : (
-                <IoMdArrowDropdown onClick={() => setShow2(true)}/>
-                )}
+              <IoMdArrowDropup onClick={() => setShow2(false)} />
+            ) : (
+              <IoMdArrowDropdown onClick={() => setShow2(true)} />
+            )}
           </div>
           {show2 && (
-                <ol className="mt-8 text-blue-700">
-                <li><a href="">Выскажите свое мнение</a></li>
-              </ol>
-            )}
+            <ol className="mt-8 text-blue-700">
+              <li>
+                <a href="">Выскажите свое мнение</a>
+              </li>
+            </ol>
+          )}
           <div className="flex items-center justify-between mt-8">
             <BsArrowRightSquareFill className="w-8 h-8" />
             <p>Вопрос о ваших прав и процедурах</p>
             {show3 ? (
-                <IoMdArrowDropup onClick={() => setShow3(false)}/>
-                ) : (
-                <IoMdArrowDropdown onClick={() => setShow3(true)} />
-                )}
+              <IoMdArrowDropup onClick={() => setShow3(false)} />
+            ) : (
+              <IoMdArrowDropdown onClick={() => setShow3(true)} />
+            )}
           </div>
           {show3 && (
-                <ul className="mt-8 text-blue-700">
-                <li><a href="">Задайте свой вопрос</a></li>
-              </ul>
-            )}
+            <ul className="mt-8 text-blue-700">
+              <li>
+                <a href="">Задайте свой вопрос</a>
+              </li>
+            </ul>
+          )}
         </div>
       </div>
     </div>
