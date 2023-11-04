@@ -1,4 +1,3 @@
-
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import _ from "lodash";
@@ -19,5 +18,3 @@ export const postComment = createAsyncThunk(
     dispatch(getComments());
   }
 );
-
-
