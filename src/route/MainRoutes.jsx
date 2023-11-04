@@ -1,20 +1,31 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import Map from "../components/maps/Map";
 
 const MainRoutes = () => {
   const ROUTES = [
     {
       id: 1,
       path: "/",
+      element: <Map />,
+    },
+    {
+      id: 2,
+      path: "/login",
+      element: "",
+    },
+    {
+      id: 3,
+      path: "/register",
       element: "",
     },
   ];
   return (
-    <>
-      {ROUTES.map((route) => {
-        <Route key={route.id} path={route.path} element={route.element} />;
-      })}
-    </>
+    <Routes>
+      {ROUTES.map((route) => (
+        <Route key={route.id} path={route.path} element={route.element} />
+      ))}
+    </Routes>
   );
 };
 
