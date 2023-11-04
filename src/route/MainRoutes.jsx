@@ -2,12 +2,16 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Map from "../components/maps/Map";
 import OrganizationsList from "../components/OrganizationsList/OrganizationsList";
+import TendersPage from "../pages/TendersPage";
+import CreateTender from "../components/tenders/CreateTender";
+import Chart from "../components/chart/Chart";
+import HomePage from "../pages/HomePage/HomePage";
 
 const MainRoutes = () => {
   const ROUTES = [
     {
       id: 1,
-      path: "/",
+      path: "/map",
       element: <Map />,
     },
     {
@@ -24,7 +28,26 @@ const MainRoutes = () => {
       id: 4,
       path: "/organizations",
       element: <OrganizationsList />
-    }
+    },
+    {
+      path: "/",
+      element: <HomePage />,
+    },
+    {
+      id: 23,
+      path: "/tenders",
+      element: <TendersPage />,
+    },
+    {
+      id: 24,
+      path: "/createTender",
+      element: <CreateTender />,
+    },
+    {
+      id: 25,
+      path: "/chart",
+      element: <Chart />,
+    },
   ];
   return (
     <Routes>

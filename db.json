@@ -1,0 +1,30 @@
+{
+  "comments": [],
+  "users": [],
+  "tenders": [
+    {
+      "code": "0001",
+      "org": "aman",
+      "location": "loh",
+      "sum": "12",
+      "type": "Услуга",
+      "id": 1
+    },
+    {
+      "code": "0002",
+      "org": "suli",
+      "location": "lox",
+      "sum": "12",
+      "type": "Работа",
+      "id": 2
+    },
+    {
+      "code": "0003",
+      "org": "Malik",
+      "location": "loz",
+      "sum": "13",
+      "type": "Товар",
+      "id": 3
+    }
+  ]
+}
