@@ -5,6 +5,7 @@ import tendersReducer from "./tenders/tendersSlice";
 import chartsReducer from "./charts/chartsSlice";
 
 import commentSlice from "./comments/commentSlice";
+import reportsSlice from './reports/reportsSlice';
 
 export default configureStore({
   middleware: (getDefaultMiddleware) =>
@@ -15,6 +16,7 @@ export default configureStore({
     users: usersReducer,
     tenders: tendersReducer,
     comments: commentSlice,
+    reports: reportsSlice,
     charts: chartsReducer,
   },
 });
