@@ -27,7 +27,7 @@ const Map = () => {
   };
 
   return (
-    <div>
+    <div className="relative w-full">
       <div className="w-full flex justify-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -116,27 +116,25 @@ const Map = () => {
         </svg>
       </div>
       {isHovered.Batken && (
-        <ChartModal className={`${isHovered.Batken ? "block " : "hidden"}`} />
+        <ChartModal className={`${isHovered.Batken ? "block" : "hidden"}`} />
       )}
       {isHovered.Chu && (
-        <ChartModal className={`${isHovered.Chu ? "block " : "hidden"}`} />
+        <ChartModal className={`${isHovered.Chu ? "block" : "hidden"}`} />
       )}
       {isHovered.JalalAbad && (
-        <ChartModal
-          className={`${isHovered.JalalAbad ? "block " : "hidden"}`}
-        />
+        <ChartModal className={`${isHovered.JalalAbad ? "block" : "hidden"}`} />
       )}
       {isHovered.Naryn && (
-        <ChartModal className={`${isHovered.Naryn ? "block " : "hidden"}`} />
+        <ChartModal className={`${isHovered.Naryn ? "block" : "hidden"}`} />
       )}
       {isHovered.Osh && (
-        <ChartModal className={`${isHovered.Osh ? "block " : "hidden"}`} />
+        <ChartModal className={`${isHovered.Osh ? "block" : "hidden"}`} />
       )}
       {isHovered.Talas && (
-        <ChartModal className={`${isHovered.Talas ? "block " : "hidden"}`} />
+        <ChartModal className={`${isHovered.Talas ? "block" : "hidden"}`} />
       )}
       {isHovered.YsykKol && (
-        <ChartModal className={`${isHovered.YsykKol ? "block " : "hidden"}`} />
+        <ChartModal className={`${isHovered.YsykKol ? "block" : "hidden"}`} />
       )}
     </div>
   );

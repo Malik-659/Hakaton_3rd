@@ -65,7 +65,7 @@ const Navbar = () => {
       <Box sx={{ flexGrow: 1 }}>
         <AppBar
           position="static"
-          sx={{ background: "#e8d6fa ", color: "black" }}
+          sx={{ background: "#b6f2fb", color: "black" }}
         >
           <Toolbar>
             <React.Fragment>

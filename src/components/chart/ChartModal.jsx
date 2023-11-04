@@ -18,8 +18,10 @@ const ChartModal = () => {
   };
   const options = {};
   return (
-    <div className="w-1/4 h-1/3">
-      <Pie data={data} options={options} />
+    <div className="w-64 h-full bg-[#00000060]">
+      <div className="w-48 h-48">
+        <Pie data={data} options={options} />
+      </div>
     </div>
   );
 };
