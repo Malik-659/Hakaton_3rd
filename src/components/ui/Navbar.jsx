@@ -94,10 +94,10 @@ const Navbar = () => {
             ></Typography>
             <Search
               sx={{
-                background: "#f5ffc9",
+                background: "#e4e4e4",
                 transition: "background-color 0.3s",
                 "&:hover": {
-                  background: "#eefc8e ",
+                  background: "#c4c4c4 ",
                 },
               }}
             >
