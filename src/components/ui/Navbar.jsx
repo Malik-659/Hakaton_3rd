@@ -71,7 +71,6 @@ const Navbar = () => {
             <React.Fragment>
               <Button onClick={() => dispatch(toggleSidebar())}>
                 <IconButton
-                  onClick={() => dispatch(toggleSidebar())}
                   size="large"
                   edge="start"
                   color="inherit"

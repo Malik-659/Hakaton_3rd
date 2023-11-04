@@ -37,6 +37,7 @@ const MainRoutes = () => {
       element: <OrganizationsList />,
     },
     {
+      id: 5,
       path: "/",
       element: <HomePage />,
     },
@@ -58,8 +59,8 @@ const MainRoutes = () => {
     {
       id: 500,
       path: "/helps",
-      element: <Helps />, 
-    }
+      element: <Helps />,
+    },
   ];
   return (
     <Routes>
