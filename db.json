@@ -26,5 +26,55 @@
       "type": "Товар",
       "id": 3
     }
+  ],
+  "charts": [
+    {
+      "company": "AselCo",
+      "spandings": "10000",
+      "region": "Osh",
+      "id": 1
+    },
+    {
+      "company": "AltynaiCo",
+      "spandings": "15000",
+      "region": "Issyk-kul",
+      "id": 2
+    },
+    {
+      "company": "SabinaCo",
+      "spandings": "20000",
+      "region": "Naryn",
+      "id": 3
+    },
+    {
+      "company": "AnnaCo",
+      "spandings": "25000",
+      "region": "Chui",
+      "id": 4
+    },
+    {
+      "company": "AmanCo",
+      "spandings": "30000",
+      "region": "Osh",
+      "id": 5
+    },
+    {
+      "company": "MalikCo",
+      "spandings": "35000",
+      "region": "Chui",
+      "id": 6
+    },
+    {
+      "company": "SamaganCo",
+      "spandings": "40000",
+      "region": "Naryn",
+      "id": 7
+    },
+    {
+      "company": "ArgenCo",
+      "spandings": "45000",
+      "region": "Issyk-kul",
+      "id": 8
+    }
   ]
 }

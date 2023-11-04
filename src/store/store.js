@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 import tendersReducer from "./tenders/tendersSlice";
+import chartsReducer from "./charts/chartsSlice";
 
 import commentSlice from "./comments/commentSlice";
 
@@ -11,6 +12,7 @@ export default configureStore({
     }),
   reducer: {
     tenders: tendersReducer,
-    comments: commentSlice
+    comments: commentSlice,
+    charts: chartsReducer,
   },
 });
