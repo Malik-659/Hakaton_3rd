@@ -24,6 +24,7 @@ const HomePage = () => {
       <section className="flex flex-row ml-56 mr-56 items-center mb-16">
         <div>
           <h1 className="text-[#b6f2fb] font-bold text-3xl mt-16">О нас</h1>
+
           <p className="mt-8 text-2xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
             consequuntur blanditiis cupiditate placeat quaerat est eveniet
