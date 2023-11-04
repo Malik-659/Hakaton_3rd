@@ -19,6 +19,12 @@ const MainRoutes = () => {
       path: "/register",
       element: "",
     },
+    {
+      id:500,
+      path: "/helps",
+      element: ''
+    }
+
   ];
   return (
     <Routes>
