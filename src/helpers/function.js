@@ -34,3 +34,9 @@ export const updateToken = () => {
     console.log("a");
   }, 1000 * 60 * 60 * 12);
 };
+
+export const getTotalPages = async (url) => {
+  const { data } = await axios.get(url);
+  const totalPages = Math.ceil(data.length / 8);
+  return totalPages;
+};
