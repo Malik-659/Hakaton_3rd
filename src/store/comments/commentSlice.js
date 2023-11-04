@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getComments, postComment } from "./commentActions";
+import { getComments, postComment } from "./commentsActions";
 
 
 const commentSlice = createSlice({
