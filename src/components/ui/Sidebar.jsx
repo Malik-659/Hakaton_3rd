@@ -29,7 +29,7 @@ const Sidebar = () => {
         <List sx={{ position: "fixed", paddingTop: 4 }}>
           {["Tenders", "Map", "Organizations"].map((text, index) => (
             <ListItem key={text} disablePadding>
-              <ListItemButton>
+              <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
                 <ListItemIcon>
                   {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                 </ListItemIcon>
