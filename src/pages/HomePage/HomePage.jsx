@@ -21,7 +21,7 @@ const HomePage = () => {
             <img src="https://cdn-icons-gif.flaticon.com/6569/6569161.gif" />
           </div>
           <div class="card_title title-white">
-            <p>организации</p>
+            <p>закупающие организации</p>
           </div>
         </div>
 
