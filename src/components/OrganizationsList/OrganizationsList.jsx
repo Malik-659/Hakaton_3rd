@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import s from './OrganizationsList.module.css';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import OrganizationSearch from './OrganizationSearch';
+import OrganizationSort from './OrganizationSort';
 
 const OrganizationsList = () => {
     useEffect(()=>{
@@ -10,7 +12,8 @@ const OrganizationsList = () => {
   return (
       <div className={s.organizationsList}>
           <div className={s.container}>
-              <h1 className={s.title}>
+        
+              <h2 className={s.title}>
                   <div className={s.waviy}>
                       <span style={{ '--i': 1 }}>С</span>
                       <span style={{ '--i': 2 }}>П</span>
@@ -32,7 +35,11 @@ const OrganizationsList = () => {
                       <span style={{ '--i': 16 }}>И</span>
                       <span style={{ '--i': 17 }}>Й</span>
                   </div>
-              </h1>
+              </h2>
+              <div style={{display:"flex", width: "60vw", justifyContent:"space-around", margin: "14px 0"}}>
+              <OrganizationSearch />
+              <OrganizationSort />
+              </div>
               <div className={s.cards}>
                   <div data-aos="flip-left"
                       data-aos-easing="ease-out-cubic"
