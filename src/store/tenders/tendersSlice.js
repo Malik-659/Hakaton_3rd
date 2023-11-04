@@ -21,7 +21,7 @@ const tendersSlice = createSlice({
       state.currentPage = action.payload.page;
     },
     changeCategory: (state, action) => {
-      if (action.payload.category === "all") {
+      if (action.payload.category === "Все") {
         state.currentCategory = "";
       } else {
         state.currentCategory = action.payload.category;
