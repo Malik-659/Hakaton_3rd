@@ -1,6 +1,6 @@
-import React from 'react';
-import './Footer.css'
-import logo from '../../assets/redux-removebg-preview.png'
+import React from "react";
+import "./Footer.css";
+import logo from "../../assets/icons/logo.png";
 
 function Footer() {
   const createBubbles = () => {
@@ -13,16 +13,14 @@ function Footer() {
       const delay = -1 * (2 + Math.random() * 2);
 
       const bubbleStyle = {
-        '--size': `${size}rem`,
-        '--distance': `${distance}rem`,
-        '--position': `${position}%`,
-        '--time': `${time}s`,
-        '--delay': `${delay}s`,
+        "--size": `${size}rem`,
+        "--distance": `${distance}rem`,
+        "--position": `${position}%`,
+        "--time": `${time}s`,
+        "--delay": `${delay}s`,
       };
 
-      bubbles.push(
-        <div key={i} className="bubble" style={bubbleStyle}></div>
-      );
+      bubbles.push(<div key={i} className="bubble" style={bubbleStyle}></div>);
     }
 
     return bubbles;
@@ -34,8 +32,7 @@ function Footer() {
         <div className="bubbles">{createBubbles()}</div>
         <div className="content">
           <div>
-            <img src={logo} alt="logo" className='w-72 h-72' />
-            
+            <img src={logo} alt="logo" className="w-72 h-62" />
           </div>
           <div>
             <a
@@ -47,14 +44,18 @@ function Footer() {
                   'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/happy.svg")',
               }}
             ></a>
-            <p className='text-black text-xl font-bold mt-36'>©2023 by Redux</p>
+            <p className="text-black text-xl font-bold mt-36">©2023 by Redux</p>
           </div>
         </div>
       </div>
-      <svg style={{ position: 'fixed', top: '100vh' }}>
+      <svg style={{ position: "fixed", top: "100vh" }}>
         <defs>
           <filter id="blob">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feGaussianBlur
+              in="SourceGraphic"
+              stdDeviation="10"
+              result="blur"
+            />
             <feColorMatrix
               in="blur"
               mode="matrix"

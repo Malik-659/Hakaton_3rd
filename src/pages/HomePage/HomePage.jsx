@@ -40,8 +40,8 @@ const HomePage = () => {
         </div>
         <img src={AboutUs} alt="" className="w-96 h-96 p-10" />
       </section>
-      <div>
-        <div class="cards-list">
+      <div className="card-block">
+        <div class="cards-list mt-36">
           <div class="card 1">
             <div class="card_image">
               {" "}
