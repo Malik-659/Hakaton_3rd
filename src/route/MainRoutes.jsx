@@ -4,6 +4,7 @@ import Map from "../components/maps/Map";
 import TendersPage from "../pages/TendersPage";
 import CreateTender from "../components/tenders/CreateTender";
 import Chart from "../components/chart/Chart";
+import Helps from "../pages/Helps";
 
 const MainRoutes = () => {
   const ROUTES = [
@@ -37,6 +38,11 @@ const MainRoutes = () => {
       path: "/chart",
       element: <Chart />,
     },
+    {
+      id: 500,
+      path: "/helps",
+      element: <Helps />, 
+    }
   ];
   return (
     <Routes>
