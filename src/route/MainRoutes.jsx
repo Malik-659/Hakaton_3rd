@@ -1,6 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Map from "../components/maps/Map";
+import TendersPage from "../pages/TendersPage";
+import CreateTender from "../components/tenders/CreateTender";
+import Chart from "../components/chart/Chart";
 
 const MainRoutes = () => {
   const ROUTES = [
@@ -18,6 +21,21 @@ const MainRoutes = () => {
       id: 3,
       path: "/register",
       element: "",
+    },
+    {
+      id: 23,
+      path: "/tenders",
+      element: <TendersPage />,
+    },
+    {
+      id: 24,
+      path: "/createTender",
+      element: <CreateTender />,
+    },
+    {
+      id: 25,
+      path: "/chart",
+      element: <Chart />,
     },
   ];
   return (
