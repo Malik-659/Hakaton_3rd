@@ -21,9 +21,10 @@ const HomePage = () => {
         </div>
       </div>
 
-      <section className="flex flex-row ml-96 mr-96 items-center mb-16">
+      <section className="flex flex-row ml-56 mr-56 items-center mb-16">
         <div>
-          <h1 className="text-[#ac8cea] font-bold text-3xl mt-16">О нас</h1>
+          <h1 className="text-[#b6f2fb] font-bold text-3xl mt-16">О нас</h1>
+
           <p className="mt-8 text-2xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
             consequuntur blanditiis cupiditate placeat quaerat est eveniet
@@ -31,7 +32,7 @@ const HomePage = () => {
             incidunt cumque sunt ab enim reiciendis eius nulla totam
             perferendis! Assumenda autem esse officia aliquam et.
           </p>
-          <div className="w-96 h-48 bg-[#ac8cea] border rounded-xl p-6 mt-8 border-l-8 text-xl">
+          <div className="w-96 h-48 bg-[#b6f2fb] border rounded-xl p-6 mt-8 border-l-8 text-xl">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi
             velit, excepturi beatae distinctio veritatis necessitatibus quia.
             Debitis est ea facilis.
