@@ -16,10 +16,8 @@ const Camera = () => {
     const imageSrc = webcamRef.current.getScreenshot();
     setUrl(imageSrc);
 
-    // Отразите изображение горизонтально перед передачей в Tesseract
     const flippedImageSrc = await flipImage(imageSrc);
 
-    // Извлечение текста из отраженного снимка паспорта
     Tesseract.recognize(flippedImageSrc, "eng")
       .then(({ data: { text } }) => {
         setPassportText(text);
@@ -33,7 +31,6 @@ const Camera = () => {
     console.log(e);
   };
 
-  // Функция для отражения изображения горизонтально
   const flipImage = async (imageSrc) => {
     return new Promise((resolve) => {
       const img = new Image();
@@ -60,7 +57,7 @@ const Camera = () => {
         screenshotFormat="image/png"
         videoConstraints={videoConstraints}
         onUserMedia={onUserMedia}
-        mirrored={true} // Оставьте mirrored в значении true
+        mirrored={true}
       />
       <button onClick={capturePhoto}>Capture</button>
       <button onClick={() => setUrl(null)}>Refresh</button>

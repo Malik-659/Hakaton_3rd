@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { getComments, postComment } from "./commentsActions";
 
+
 const commentSlice = createSlice({
   name: "comments",
   initialState: {

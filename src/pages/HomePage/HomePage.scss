@@ -1,93 +1,94 @@
-.header{
-    background-color: #fff;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    border-bottom: #252525 solid;
-    border-top: #252525 solid;
-}  
+.header {
+  background-color: #fff;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  border-bottom: #252525 solid;
+  border-top: #252525 solid;
+}
 body {
-     position: relative;
-     height: 100vh;
-     width: 100vw;
-     margin: 0;
-   }
-   
-   @import url('https://fonts.googleapis.com/css?family=Montserrat:900');
-   
-h1 {
-     margin: 0;
-     font-family: 'Montserrat', sans-serif;
-     font-size: 10vh;
-     letter-spacing: 0.3vw;
-     top: 15vh;
-     text-align: center;
-     left: 50%;
-     color: white;
-     // background:url('https://i.pinimg.com/originals/9f/9c/c5/9f9cc5217bb04790e5fb852b665ca2ff.jpg');
-     background:url('https://99px.ru/sstorage/53/2018/07/tmb_232118_279704.jpg') repeat-y;
-      background-size: auto 200%;
-     background-clip: text;
-     text-fill-color: transparent;
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
-     animation: shine 8s linear infinite;
-     &:nth-child(2) {
-       top: 50vh;
-     }
-     @keyframes shine {
-       from {
-         background-position: center 0;
-       }
-       to {
-         background-position: center 200%;
-       }
-     }
-   }
-  
-   .button {
-    height: 50px;
-    width: 200px;
-    position: relative;
-    background-color: transparent;
-    cursor: pointer;
-    border: 2px solid #252525;
-    overflow: hidden;
-    border-radius: 30px;
-    color: #333;
-    transition: all 0.5s ease-in-out;
-    margin-top: 30px;
-  }
-  
-  .btn-txt {
-    z-index: 1;
-    font-weight: 800;
-    letter-spacing: 4px;
-  }
-  
-  .type1::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    transition: all 0.5s ease-in-out;
-    background-color: #333;
-    border-radius: 30px;
-    visibility: hidden;
-    height: 10px;
-    width: 10px;
-    z-index: -1;
-  }
-  
-  .button:hover {
-    box-shadow: 1px 1px 200px #252525;
-    border: none;
-  }
-  
-  .type1:hover::after {
-    visibility: visible;
-    transform: scale(100) translateX(2px);
-  }
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
 
-  .card-block {
-    border-top: #252525 solid;
+@import url("https://fonts.googleapis.com/css?family=Montserrat:900");
+
+h1 {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10vh;
+  letter-spacing: 0.3vw;
+  top: 15vh;
+  text-align: center;
+  left: 50%;
+  color: white;
+  // background:url('https://i.pinimg.com/originals/9f/9c/c5/9f9cc5217bb04790e5fb852b665ca2ff.jpg');
+  background: url("https://99px.ru/sstorage/53/2018/07/tmb_232118_279704.jpg")
+    repeat-y;
+  background-size: auto 200%;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 8s linear infinite;
+  &:nth-child(2) {
+    top: 50vh;
   }
+  @keyframes shine {
+    from {
+      background-position: center 0;
+    }
+    to {
+      background-position: center 200%;
+    }
+  }
+}
+
+.button {
+  height: 50px;
+  width: 200px;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #252525;
+  overflow: hidden;
+  border-radius: 30px;
+  color: #333;
+  transition: all 0.5s ease-in-out;
+  margin-top: 30px;
+}
+
+.btn-txt {
+  z-index: 1;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.type1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: #333;
+  border-radius: 30px;
+  visibility: hidden;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+}
+
+.button:hover {
+  box-shadow: 1px 1px 200px #252525;
+  border: none;
+}
+
+.type1:hover::after {
+  visibility: visible;
+  transform: scale(100) translateX(2px);
+}
+
+.card-block {
+  border-top: #252525 solid;
+}
