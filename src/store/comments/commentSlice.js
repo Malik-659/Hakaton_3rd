@@ -7,8 +7,13 @@ const commentSlice = createSlice({
     comments: [],
     laoding: false,
     error: "",
+    sidebar: false,
   },
-  reducers: {},
+  reducers: {
+    toggleSidebar: (state) => {
+      state.sidebar = !state.sidebar;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getComments.pending, (state, action) => {
@@ -27,4 +32,5 @@ const commentSlice = createSlice({
   },
 });
 
+export const { toggleSidebar } = commentSlice.actions;
 export default commentSlice.reducer;
