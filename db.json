@@ -1,11 +1,9 @@
 {
-  "tenders": [
-    {
-      "code": "",
-      "org": "",
-      "type": "",
-      "location": "",
-      "sum": 0
-    }
-  ]
+
+
+  "comments": [],
+  "users": [],
+  "tenders": []
 }
+
+
