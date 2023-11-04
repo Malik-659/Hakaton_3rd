@@ -3,7 +3,7 @@ import headerImage from "../../assets/icons/headerImage.svg";
 import "../HomePage/HomePage.scss";
 import AboutUs from '../../assets/AboutUs.svg'
 import line from  "../../assets/icons/line.svg";
-
+import "./HomePage.css";
 const HomePage = () => {
   return (
     <>
@@ -31,8 +31,48 @@ const HomePage = () => {
 </div>
 <img src={AboutUs} alt="" className="w-96 h-96 p-10"/>
 </section>
+<div>
+      <div class="cards-list">
+        <div class="card 1">
+          <div class="card_image">
+            {" "}
+            <img src="https://cdn-icons-gif.flaticon.com/11259/11259503.gif" />{" "}
+          </div>
+          <div class="card_title title-white">
+            <p>поставщики</p>
+          </div>
+        </div>
+
+        <div class="card 2">
+          <div class="card_image">
+            <img src="https://cdn-icons-gif.flaticon.com/6569/6569161.gif" />
+          </div>
+          <div class="card_title title-white">
+            <p>закупающие организации</p>
+          </div>
+        </div>
+
+        <div class="card 3">
+          <div class="card_image">
+            <img src="https://cdn-icons-gif.flaticon.com/9822/9822035.gif" />
+          </div>
+          <div class="card_title">
+            <p>тендеры</p>
+          </div>
+        </div>
+
+        <div class="card 4">
+          <div class="card_image">
+            <img src="https://cdn-icons-gif.flaticon.com/11616/11616297.gif" />
+          </div>
+          <div class="card_title title-black">
+            <p>бюджет</p>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+
     </>
-  );
-};
 
 export default HomePage;
