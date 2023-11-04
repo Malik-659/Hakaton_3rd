@@ -1,20 +1,11 @@
 {
-  "tenders": [
-    {
-      "code": "",
-      "org": "",
-      "location": "",
-      "sum": 0,
-      "type": "",
-      "id": 1
-    },
-    {
-      "code": "123",
-      "org": "SUli",
-      "location": "Jopa",
-      "sum": "12",
-      "type": "",
-      "id": 2
-    }
-  ]
+
+
+
+  "comments": [],
+  "users": [],
+  "tenders": []
 }
+
+
+
