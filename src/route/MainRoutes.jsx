@@ -4,6 +4,7 @@ import Map from "../components/maps/Map";
 import TendersPage from "../pages/TendersPage";
 import CreateTender from "../components/tenders/CreateTender";
 import Chart from "../components/chart/Chart";
+import HomePage from "../pages/HomePage/HomePage";
 
 const MainRoutes = () => {
   const ROUTES = [
@@ -21,6 +22,11 @@ const MainRoutes = () => {
       id: 3,
       path: "/register",
       element: "",
+    },
+    {
+      id: 4,
+      path: "/homepage",
+      element: <HomePage />,
     },
     {
       id: 23,
