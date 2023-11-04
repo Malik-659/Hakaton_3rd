@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Map from "../components/maps/Map";
+import OrganizationsList from "../components/OrganizationsList/OrganizationsList";
 import TendersPage from "../pages/TendersPage";
 import CreateTender from "../components/tenders/CreateTender";
 import Chart from "../components/chart/Chart";
@@ -25,6 +26,10 @@ const MainRoutes = () => {
     },
     {
       id: 4,
+      path: "/organizations",
+      element: <OrganizationsList />
+    },
+    {
       path: "/",
       element: <HomePage />,
     },
