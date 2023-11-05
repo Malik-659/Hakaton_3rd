@@ -18,7 +18,7 @@ function Chart() {
   useEffect(() => {
     if (charts && charts.length > 0) {
       const labels = charts.map((chart) => chart.company);
-      const prikol = charts.map((chart) => parseInt(chart.spandings));
+      const prikol = charts.map((chart) => chart.price);
       setChartData({
         labels: labels,
         datasets: [
