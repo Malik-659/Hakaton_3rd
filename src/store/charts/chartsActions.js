@@ -7,15 +7,18 @@ export const getCharts = createAsyncThunk("charts/getCharts", async () => {
   return data;
 });
 
-export const getOneChart = createAsyncThunk('charts/getOneChart', async (countre, {dispatch}) => {
-  try {
-  const data = await dispatch(getCharts())
-const res = data.payload.filter((item) => item.countre===countre)
+export const getOneChart = createAsyncThunk(
+  "charts/getOneChart",
+  async (countre, { dispatch }) => {
+    try {
+      const data = await dispatch(getCharts());
+      const res = data.payload.filter((item) => item.countre === countre);
 
-console.log(res)
-    return res; 
-  } catch (error) {
-    console.error('Ошибка при получении данных:', error);
-    throw error; 
+      console.log(res);
+      return res;
+    } catch (error) {
+      console.error("Ошибка при получении данных:", error);
+      throw error;
+    }
   }
-});
+);
