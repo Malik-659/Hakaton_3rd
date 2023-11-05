@@ -54,18 +54,7 @@ const Sidebar = () => {
             </ListItem>
           ))}
         </List>
-        <List sx={{ position: "fixed", paddingTop: 8 }}>
-          {["Tenders", "Map"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
-                <ListItemIcon>
-                  {index % 2 == 0 ? <HandshakeIcon /> : <PublicIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
+
         {checkUserLogin() ? (
           <List sx={{ position: "fixed", bottom: 80 }}>
             {["logout"].map((text, index) => (
