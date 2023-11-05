@@ -3,14 +3,14 @@ import { Route, Routes } from "react-router-dom";
 import Map from "../components/maps/Map";
 import Login from "../components/auth/Login";
 import Register from "../components/auth/Register";
-import AllCameras from "../components/auth/AllCameras";
-import Camera from "../components/auth/Camera";
 import ActiveCode from "../components/auth/ActiveCode";
-import OrganizationsList from "../components/OrganizationsList/OrganizationsList";
+import OrganizationPage from "../components/OrganizationsList/OrganizationPage";
 import TendersPage from "../pages/TendersPage";
 import CreateTender from "../components/tenders/CreateTender";
 import Chart from "../components/chart/Chart";
+import Helps from "../pages/Helps";
 import HomePage from "../pages/HomePage/HomePage";
+import MapDetails from "../components/maps/MapDetails";
 
 const MainRoutes = () => {
   const ROUTES = [
@@ -18,6 +18,11 @@ const MainRoutes = () => {
       id: 1,
       path: "/map",
       element: <Map />,
+    },
+    {
+      id: 333,
+      path: "/map/:id",
+      element: <MapDetails />,
     },
     {
       id: 2,
@@ -30,14 +35,13 @@ const MainRoutes = () => {
       element: <Register />,
     },
     { id: 776, path: "/activeCode", element: <ActiveCode /> },
-    { id: 777, path: "/webcam", element: <AllCameras /> },
-    { id: 778, path: "/webcamScreenshot", element: <Camera /> },
     {
       id: 4,
       path: "/organizations",
-      element: <OrganizationsList />
+      element: <OrganizationPage />,
     },
     {
+      id: 5,
       path: "/",
       element: <HomePage />,
     },
@@ -55,6 +59,11 @@ const MainRoutes = () => {
       id: 25,
       path: "/chart",
       element: <Chart />,
+    },
+    {
+      id: 500,
+      path: "/helps",
+      element: <Helps />,
     },
   ];
   return (

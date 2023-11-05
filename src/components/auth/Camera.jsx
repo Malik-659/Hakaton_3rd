@@ -7,7 +7,7 @@ const videoConstraints = {
   facingMode: "environment",
 };
 
-const Camera = () => {
+const Camera = ({ setOpenModal }) => {
   const webcamRef = useRef(null);
   const [url, setUrl] = useState(null);
   const [passportText, setPassportText] = useState("");
@@ -16,10 +16,7 @@ const Camera = () => {
     const imageSrc = webcamRef.current.getScreenshot();
     setUrl(imageSrc);
 
-    // Отразите изображение горизонтально перед передачей в Tesseract
     const flippedImageSrc = await flipImage(imageSrc);
-
-    // Извлечение текста из отраженного снимка паспорта
     Tesseract.recognize(flippedImageSrc, "eng")
       .then(({ data: { text } }) => {
         setPassportText(text);
@@ -33,7 +30,6 @@ const Camera = () => {
     console.log(e);
   };
 
-  // Функция для отражения изображения горизонтально
   const flipImage = async (imageSrc) => {
     return new Promise((resolve) => {
       const img = new Image();
@@ -53,14 +49,21 @@ const Camera = () => {
   };
 
   return (
-    <>
+    <div className="w-[1000px] h-[1000px]">
+      <button
+        onClick={() => {
+          setOpenModal(false);
+        }}
+      >
+        X
+      </button>
       <Webcam
         ref={webcamRef}
         audio={true}
         screenshotFormat="image/png"
         videoConstraints={videoConstraints}
         onUserMedia={onUserMedia}
-        mirrored={true} // Оставьте mirrored в значении true
+        mirrored={true}
       />
       <button onClick={capturePhoto}>Capture</button>
       <button onClick={() => setUrl(null)}>Refresh</button>
@@ -75,7 +78,7 @@ const Camera = () => {
         <h2>Извлеченный текст из паспорта:</h2>
         <p>{passportText}</p>
       </div>
-    </>
+    </div>
   );
 };
 

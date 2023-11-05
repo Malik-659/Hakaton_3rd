@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import TendersList from "../components/tenders/TendersList";
 import TendersFilter from "../components/tenders/TendersFilter";
 import TendersSearch from "../components/tenders/TendersSearch";
@@ -9,21 +8,19 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const TendersPage = () => {
-  const navigate = useNavigate();
-
   useEffect(() => {
     AOS.init();
   }, []);
 
   return (
     <div style={{ width: "70%", margin: "50px auto" }}>
-      <h1
+      <h2
         data-aos="fade-down"
         data-aos-duration="2000"
         style={{ textAlign: "center", fontSize: "36px", letterSpacing: "1px" }}
       >
         СПИСОК ТЕНДЕРОВ
-      </h1>
+      </h2>
       <div
         style={{
           marginTop: "50px",
@@ -43,8 +40,19 @@ const TendersPage = () => {
       </div>
       <div style={{ marginTop: "50px" }}>
         <TendersList />
+        <div
+          style={{
+            marginTop: "50px",
+            display: "flex",
+            justifyContent: "center",
+          }}
+          data-aos="zoom-in-up"
+          data-aos-duration="2000"
+        >
+          <PaginationControlled />
+        </div>
       </div>
-      <div>
+      {/* <div>
         <button
           style={{}}
           onClick={() => {
@@ -53,7 +61,7 @@ const TendersPage = () => {
         >
           Создать
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
