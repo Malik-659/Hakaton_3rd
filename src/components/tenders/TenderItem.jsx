@@ -48,7 +48,7 @@ const TenderItem = ({ tender }) => {
       </div>
       <div style={{ position: "absolute", bottom: "10px ", right: "10px" }}>
         <button onClick={toggleMenu} style={{ color: "purple" }}>
-          Информация о вскрытии:
+          Протокол вскрытия
           {modal && (
             <div>
               <TendersModal closeModal={closeModal} tender={tender} />
