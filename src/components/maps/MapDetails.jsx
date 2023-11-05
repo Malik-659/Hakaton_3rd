@@ -1,9 +1,12 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
+import { filterCircle, getCircle } from "../../store/circle/circleAction";
 
 const MapDetails = () => {
   const { id } = useParams();
+  const dispatch = useDispatch();
+  const { circle, filterCir } = useSelector((state) => state.circles);
   const PATH = [
     <path
       className={`fill-[#87CEFA] stroke-[#121212] duration-700 hover:fill-[#1E90FF]`}
@@ -48,30 +51,46 @@ const MapDetails = () => {
       id="KG-Y"
     />,
   ];
-  console.log(PATH);
-  const { mapDetails } = useSelector((state) => state.charts);
-  //   console.log(id);
+
+  useEffect(() => {
+    dispatch(getCircle());
+    dispatch(filterCircle(id));
+  }, []);
   return (
-    <div className="flex justify-center py-12">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="792.38214"
-        height="389.39474"
-      >
-        {PATH.map(
-          (item) =>
-            item.props.id === id && (
-              <path
-                key={item.props.id}
-                className={`fill-[#64aedc] stroke-[#121212] duration-700 hover:fill-[#5d93f6]`}
-                d={item.props.d}
-                title={item.props.title}
-                id={item.props.id}
-              />
-            )
-        )}
-      </svg>
-    </div>
+    <>
+      {circle && (
+        <>
+          <div className="flex justify-center py-12">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="792.38214"
+              height="389.39474"
+            >
+              {PATH.map(
+                (item) =>
+                  item.props.id === id && (
+                    <path
+                      key={item.props.id}
+                      className={`fill-[#64aedc] stroke-[#121212] duration-700 hover:fill-[#5d93f6]`}
+                      d={item.props.d}
+                      title={item.props.title}
+                      id={item.props.id}
+                    />
+                  )
+              )}
+            </svg>
+          </div>
+          <div>
+            {filterCir.map((item) => (
+              <div className="">
+                <h3>{item.compani}</h3>
+                <p>{item.price}</p>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+    </>
   );
 };
 
