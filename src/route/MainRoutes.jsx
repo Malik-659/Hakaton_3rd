@@ -10,10 +10,9 @@ import CreateTender from "../components/tenders/CreateTender";
 import Chart from "../components/chart/Chart";
 import Helps from "../pages/Helps";
 import HomePage from "../pages/HomePage/HomePage";
-
 import Diogram from "../components/diogram/Diogram";
-
 import MapDetails from "../components/maps/MapDetails";
+import Lesson from "../components/lesson/Lesson";
 
 const MainRoutes = () => {
   const ROUTES = [
@@ -72,6 +71,11 @@ const MainRoutes = () => {
       id: 500,
       path: "/help",
       element: <Helps />,
+    },
+    {
+      id: 501,
+      path: "/lesson",
+      element: <Lesson />,
     },
   ];
   return (
