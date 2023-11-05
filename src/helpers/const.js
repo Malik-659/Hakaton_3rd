@@ -8,4 +8,5 @@ export const REPORT_API = "http://localhost:8000/reports";
 
 export const CIRCLE_API = "http://localhost:8000/info_circle";
 
+
 export const CHARTS_API = "http://localhost:8000/charts";
