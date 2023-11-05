@@ -4,7 +4,7 @@ export const TENDERS_API = "http://localhost:8000/tenders";
 
 export const COMMENT_API = "http://localhost:8000/comments";
 
-export const REPORT_API = "http://localhost:8000/reports";
+export const REPORT_API = "http://localhost:8000/report";
 
 export const CIRCLE_API = "http://localhost:8000/info_circle";
 
