@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
 // import { filterCircle, getCircle } from "../../store/circle/circleAction";
 import { getOneChart } from "../../store/charts/chartsActions";
+import "./MapDetails.css"
 
 const MapDetails = () => {
   const { id } = useParams();
@@ -54,10 +55,13 @@ const MapDetails = () => {
     />,
   ];
 
-
+  
   useEffect(() => {
     dispatch(getOneChart(id))
+    
   }, []);
+
+  
   return (
     <>
       {oneChart && (
@@ -79,14 +83,34 @@ const MapDetails = () => {
             ))}
             </svg>
           </div>
-          <div>
-            {oneChart.map((item)=>(
-              <div>
-                <h3>{item.company}</h3>
-                <p>{item.price}</p>
-              </div>
-            ))}
-          </div>
+          <h1>{id.toUpperCase()}</h1>
+          <table>
+            <thead>
+              <tr>
+                <th>Название организации : </th>
+                <th>Сумма затрат : </th>
+                <th>Период : </th>
+              </tr>
+            </thead>
+            <tbody>
+            {/* {oneChart.sort((a,b)=>b-a).map((item)=>(
+              <tr>
+                <td style={{fontWeight:"bold"}}>{item.compani}</td>
+                <td>{item.price}</td>
+                <td>2023</td>
+              </tr>
+            ))} */}
+              {
+              oneChart.map((item) => (
+                <tr key={item.compani}>
+                  <td style={{ fontWeight: "bold" }}>{item.compani}</td>
+                  <td>{item.price}</td>
+                  <td>2023</td>
+                </tr>
+              ))
+              }
+            </tbody>
+          </table>
         </>
       )}
     </>
