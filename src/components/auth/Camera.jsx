@@ -7,7 +7,7 @@ const videoConstraints = {
   facingMode: "environment",
 };
 
-const Camera = () => {
+const Camera = ({ setOpenModal }) => {
   const webcamRef = useRef(null);
   const [url, setUrl] = useState(null);
   const [passportText, setPassportText] = useState("");
@@ -17,7 +17,6 @@ const Camera = () => {
     setUrl(imageSrc);
 
     const flippedImageSrc = await flipImage(imageSrc);
-
     Tesseract.recognize(flippedImageSrc, "eng")
       .then(({ data: { text } }) => {
         setPassportText(text);
@@ -50,7 +49,14 @@ const Camera = () => {
   };
 
   return (
-    <>
+    <div className="w-[1000px] h-[1000px]">
+      <button
+        onClick={() => {
+          setOpenModal(false);
+        }}
+      >
+        X
+      </button>
       <Webcam
         ref={webcamRef}
         audio={true}
@@ -72,7 +78,7 @@ const Camera = () => {
         <h2>Извлеченный текст из паспорта:</h2>
         <p>{passportText}</p>
       </div>
-    </>
+    </div>
   );
 };
 

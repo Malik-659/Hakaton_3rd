@@ -14,6 +14,7 @@ import logo from "../../assets/icons/logo.png";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSidebar } from "../../store/comments/commentSlice";
 import Sidebar from "./Sidebar";
+import { useNavigate } from "react-router";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -60,6 +61,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const Navbar = () => {
   const { sidebar } = useSelector((state) => state.comments);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
@@ -84,7 +86,12 @@ const Navbar = () => {
                 <Sidebar />
               </Drawer>
             </React.Fragment>
-            <img className="w-36 h-18 mr-4" src={logo} alt="logo" />
+            <img
+              onClick={() => navigate("/")}
+              className="w-36 h-18 mr-4 cursor-pointer"
+              src={logo}
+              alt="logo"
+            />
             <Typography
               variant="h6"
               noWrap

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import TendersList from "../components/tenders/TendersList";
 import TendersFilter from "../components/tenders/TendersFilter";
 import TendersSearch from "../components/tenders/TendersSearch";
@@ -9,8 +8,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const TendersPage = () => {
-  const navigate = useNavigate();
-
   useEffect(() => {
     AOS.init();
   }, []);
