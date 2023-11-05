@@ -4,6 +4,7 @@ import usersReducer from "./users/usersSlice";
 import tendersReducer from "./tenders/tendersSlice";
 
 import commentSlice from "./comments/commentSlice";
+import reportsSlice from './reports/reportsSlice';
 
 export default configureStore({
   middleware: (getDefaultMiddleware) =>
@@ -13,6 +14,7 @@ export default configureStore({
   reducer: {
     users: usersReducer,
     tenders: tendersReducer,
-    comments: commentSlice
+    comments: commentSlice,
+    reports: reportsSlice
   },
 });

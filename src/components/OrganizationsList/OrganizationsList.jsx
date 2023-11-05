@@ -4,14 +4,27 @@ import Aos from 'aos';
 import 'aos/dist/aos.css'
 import OrganizationSearch from './OrganizationSearch';
 import OrganizationSort from './OrganizationSort';
+import { useDispatch, useSelector } from 'react-redux';
+import { getReports } from '../../store/reports/reportsActions';
 
 const OrganizationsList = () => {
+
+    const {reports, loading} = useSelector((state)=> state.reports);
+
+    const dispatch = useDispatch();
     useEffect(()=>{
         Aos.init({duration:2000})
     }, [])
+
+    useEffect(()=>{
+        dispatch(getReports())
+    }, [])
   return (
       <div className={s.organizationsList}>
-          <div className={s.container}>
+        {loading ? (
+            <h3>Loading...</h3>
+        ):(
+            <div className={s.container}>
         
               <h2 className={s.title}>
                   <div className={s.waviy}>
@@ -41,100 +54,35 @@ const OrganizationsList = () => {
               <OrganizationSort />
               </div>
               <div className={s.cards}>
-                  <div data-aos="flip-left"
-                      data-aos-easing="ease-out-cubic"
-                      data-aos-duration="2000" className={s.card}>
-                      <div>
-                          <p>Название организации</p>
-                          <h3 className={s.cardTitle}>ЦОН Жибек-Жолу</h3>
-                          <p>Сумма</p>
-                          <h3>2 000 000</h3>
-                      </div>
-                      <div className={s.info}>
-                          <div>
-                              <p>Год</p>
-                              <h4>2023</h4>
-                          </div>
-                          <div>
-                              <p>Номер счета</p>
-                              <h4>41565841568415874154</h4>
-                          </div>
-                      </div>
-                      <div>
-                        <img className={s.imageAnimated} src='https://cdn-icons-gif.flaticon.com/9822/9822032.gif' />
-                      </div>
-                  </div>
-                  <div data-aos="flip-left"
-                      data-aos-easing="ease-out-cubic"
-                      data-aos-duration="2000" className={s.card}>
-                      <div>
-                          <p>Название организации</p>
-                          <h3 className={s.cardTitle}>ЦОН Жибек-Жолу</h3>
-                          <p>Сумма</p>
-                          <h3>2 000 000</h3>
-                      </div>
-                      <div className={s.info}>
-                          <div>
-                              <p>Год</p>
-                              <h4>2023</h4>
-                          </div>
-                          <div>
-                              <p>Номер счета</p>
-                              <h4>41565841568415874154</h4>
-                          </div>
-                      </div>
-                      <div>
-                        <img className={s.imageAnimated} src='https://cdn-icons-gif.flaticon.com/9822/9822032.gif' />
-                      </div>
-                  </div>
-                  <div data-aos="flip-left"
-                      data-aos-easing="ease-out-cubic"
-                      data-aos-duration="2000" className={s.card}>
-                      <div>
-                          <p>Название организации</p>
-                          <h3 className={s.cardTitle}>ЦОН Жибек-Жолу</h3>
-                          <p>Сумма</p>
-                          <h3>2 000 000</h3>
-                      </div>
-                      <div className={s.info}>
-                          <div>
-                              <p>Год</p>
-                              <h4>2023</h4>
-                          </div>
-                          <div>
-                              <p>Номер счета</p>
-                              <h4>41565841568415874154</h4>
-                          </div>
-                      </div>
-                      <div>
-                        <img className={s.imageAnimated} src='https://cdn-icons-gif.flaticon.com/9822/9822032.gif' />
-                      </div>
-                  </div>
-                  <div data-aos="flip-left"
-                      data-aos-easing="ease-out-cubic"
-                      data-aos-duration="2000" className={s.card}>
-                      <div>
-                          <p>Название организации</p>
-                          <h3 className={s.cardTitle}>ЦОН Жибек-Жолу</h3>
-                          <p>Сумма</p>
-                          <h3>2 000 000</h3>
-                      </div>
-                      <div className={s.info}>
-                          <div>
-                              <p>Год</p>
-                              <h4>2023</h4>
-                          </div>
-                          <div>
-                              <p>Номер счета</p>
-                              <h4>41565841568415874154</h4>
-                          </div>
-                      </div>
-                      <div>
-                        <img className={s.imageAnimated} src='https://cdn-icons-gif.flaticon.com/9822/9822032.gif' />
-                      </div>
-                  </div>
+                {reports.map((report)=>(
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" className={s.card} key={report.id}>
+                    <div>
+                        <p>Название организации</p>
+                        <h3 className={s.cardTitle}>{report.AccountName}</h3>
+                        <p>Сумма</p>
+                        <h3>{report.Sum} сом</h3>
+                    </div>
+                    <div className={s.info}>
+                        <div>
+                            <p>Год</p>
+                            <h4>{report.Year}</h4>
+                        </div>
+                        <div>
+                            <p>Номер счета</p>
+                            <h4>{report.AccountNumber}</h4>
+                        </div>
+                    </div>
+                    <div>
+                      <img className={s.imageAnimated} src='https://cdn-icons-gif.flaticon.com/9822/9822032.gif' />
+                    </div>
+                </div>
+                ))}  
               </div>
           </div>
+        )}
+          
       </div>
   )
 }
