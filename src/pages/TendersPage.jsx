@@ -17,7 +17,7 @@ const TendersPage = () => {
       <h2
         data-aos="fade-down"
         data-aos-duration="2000"
-        style={{ textAlign: "center", fontSize: "36px", letterSpacing: "1px" }}
+        style={{ textAlign: "center", fontSize: "42px", letterSpacing: "1px" , color: "black"}}
       >
         СПИСОК ТЕНДЕРОВ
       </h2>

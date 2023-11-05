@@ -14,6 +14,9 @@ body {
   box-sizing: border-box;
 }
 
+#root{
+  background-color: #fff;
+}
 * {
   font-family: "Archivo+Black", sans-serif;
 }
