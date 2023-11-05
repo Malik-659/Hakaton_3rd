@@ -26,7 +26,7 @@ const TendersFilter = () => {
   return (
     <div>
       <div>
-        <select value={category} onChange={(e) => setCategory(e.target.value)}>
+        <select className="bg-white border-2 border-stone-950 w-56 h-12 rounded" value={category} onChange={(e) => setCategory(e.target.value)}>
           <option value="Все">Все</option>
           {categories.map((category) => (
             <option key={category} value={category}>

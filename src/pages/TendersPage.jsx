@@ -24,6 +24,7 @@ const TendersPage = () => {
           fontSize: "36px",
           letterSpacing: "1px",
           marginTop: "50px",
+          color: "black",
         }}
       >
         СПИСОК ТЕНДЕРОВ

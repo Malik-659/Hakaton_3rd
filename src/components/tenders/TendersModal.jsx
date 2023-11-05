@@ -25,9 +25,10 @@ const TendersModal = ({ tender }) => {
         display: "flex",
         flexDirection: "column",
         width: "50%",
+        border: "1px solid black",
       }}
     >
-      <h2>Информация о вскрытии :</h2>
+      <h2 className="font-bold text-xl">ИНФОРМАЦИЯ О ВСКРЫТИИ</h2>
       <p>Организация: {tenderDet.organize}</p>
       <p>Место на тендере: {tenderDet.place}ое</p>
       <p>Цена предложения: {tenderDet.price_min} сом</p>
