@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import ChartModal from "../chart/ChartModal";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
+import Chart from "../chart/Chart";
+import { getOneChart } from "../../store/charts/chartsActions";
 
 const Map = () => {
   const dispatch = useDispatch();
@@ -16,10 +18,12 @@ const Map = () => {
     YsykKol: false,
   });
   const [isChartModalVisible, setIsChartModalVisible] = useState(false);
+  const [hoveredCountry, setHoveredCountry] = useState('');
 
   useEffect(() => {
     const isAnyTrue = Object.values(isHovered).some((value) => value);
     setIsChartModalVisible(isAnyTrue);
+    dispatch(getOneChart(hoveredCountry))
   }, [isHovered]);
 
   const handleRegionMouseToggle = (regionName, isHovered) => {
@@ -29,11 +33,12 @@ const Map = () => {
     }));
   };
 
+
   return (
     <div className="relative w-full p-20">
       <div className="w-full flex justify-center">
         {isChartModalVisible ? (
-          <ChartModal />
+          <Chart />
         ) : (
           <div className="w-1/3 mr-6"></div>
         )}
@@ -42,7 +47,8 @@ const Map = () => {
           width="792.38214"
           height="389.39474"
         >
-          <path
+          <path onMouseOver={()=>setHoveredCountry("Batken")}
+          onMouseOut={()=> setHoveredCountry('')}
             onClick={(e) => {
               navigate(`/map/${e.target.id}`);
             }}
@@ -53,7 +59,8 @@ const Map = () => {
             title="Batken"
             id="KG-B"
           />
-          <path
+          <path onMouseOver={()=>setHoveredCountry("Chu")}
+          onMouseOut={()=> setHoveredCountry('')}
             onClick={(e) => {
               navigate(`/map/${e.target.id}`);
             }}
@@ -64,7 +71,8 @@ const Map = () => {
             title="Chü"
             id="KG-C"
           />
-          <path
+          <path onMouseOver={()=>setHoveredCountry("JalalAbad")}
+          onMouseOut={()=> setHoveredCountry('')}
             onClick={(e) => {
               navigate(`/map/${e.target.id}`);
             }}
@@ -75,7 +83,8 @@ const Map = () => {
             title="Jalal-Abad"
             id="KG-J"
           />
-          <path
+          <path onMouseOver={()=>setHoveredCountry("Naryn")}
+          onMouseOut={()=> setHoveredCountry('')}
             onClick={(e) => {
               navigate(`/map/${e.target.id}`);
             }}
@@ -86,7 +95,8 @@ const Map = () => {
             title="Naryn"
             id="KG-N"
           />
-          <path
+          <path onMouseOver={()=>setHoveredCountry("Osh")}
+          onMouseOut={()=> setHoveredCountry('')}
             onClick={(e) => {
               navigate(`/map/${e.target.id}`);
             }}
@@ -97,7 +107,8 @@ const Map = () => {
             title="Osh"
             id="KG-O"
           />
-          <path
+          <path onMouseOver={()=>setHoveredCountry("Talas")}
+          onMouseOut={()=> setHoveredCountry('')}
             onClick={(e) => {
               navigate(`/map/${e.target.id}`);
             }}
@@ -108,7 +119,8 @@ const Map = () => {
             title="Talas"
             id="KG-T"
           />
-          <path
+          <path onMouseOver={()=>setHoveredCountry("YsykKol")}
+          onMouseOut={()=> setHoveredCountry('')}
             onClick={(e) => {
               navigate(`/map/${e.target.id}`);
             }}

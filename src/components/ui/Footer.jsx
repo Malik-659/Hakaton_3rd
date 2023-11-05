@@ -44,7 +44,7 @@ function Footer() {
                   'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/happy.svg")',
               }}
             ></a>
-            <p className="text-black text-xl font-bold mt-36">©2023 by Redux</p>
+            <p className="text-white text-xl font-bold mt-36">©2023 by Redux</p>
           </div>
         </div>
       </div>

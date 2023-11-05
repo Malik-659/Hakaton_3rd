@@ -25,6 +25,7 @@ const chartsSlice = createSlice({
         state.loading = false;
         state.oneChart = action.payload.data;
       });
+
   },
 });
 
