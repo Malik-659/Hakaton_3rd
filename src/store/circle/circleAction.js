@@ -1,7 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { CIRCLE_API } from "../../helpers/const";
-import { async } from "q";
 
 export const getCircle = createAsyncThunk("circles/getCircle", async () => {
   const { data } = await axios.get(CIRCLE_API);

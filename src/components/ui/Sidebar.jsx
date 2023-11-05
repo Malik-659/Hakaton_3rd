@@ -92,6 +92,16 @@ const Sidebar = () => {
             ))}
           </List>
         )}
+        <a
+          style={{ position: "fixed", top: "70px" }}
+          href="https://web.telegram.org/k/#@ReduxGosZap_Bot"
+          target="_blank"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/87/87413.png"
+            className=" h-[50px] cursor-pointer object-cover w-[50px]"
+          />
+        </a>
       </Box>
     </div>
   );

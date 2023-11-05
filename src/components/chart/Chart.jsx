@@ -8,7 +8,7 @@ function Chart() {
   const [chartData, setChartData] = useState({});
   const { charts, oneChart } = useSelector((state) => state.charts);
   const dispatch = useDispatch();
-  
+
   console.log(oneChart);
 
   useEffect(() => {

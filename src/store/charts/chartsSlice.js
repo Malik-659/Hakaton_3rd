@@ -21,11 +21,16 @@ const chartsSlice = createSlice({
       .addCase(getCharts.rejected, (state) => {
         state.loading = false;
       })
+      .addCase(getOneChart.pending, (state) => {
+        state.loading = true;
+      })
       .addCase(getOneChart.fulfilled, (state, action) => {
         state.loading = false;
-        state.oneChart = action.payload.data;
+        state.oneChart = action.payload;
+      })
+      .addCase(getOneChart.rejected, (state) => {
+        state.loading = false;
       });
-
   },
 });
 
