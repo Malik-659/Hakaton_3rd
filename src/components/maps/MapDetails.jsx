@@ -2,11 +2,18 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
 import { filterCircle, getCircle } from "../../store/circle/circleAction";
-
+import { BsChatDots } from "react-icons/bs";
+import { toggleChatModal } from "../../store/circle/circleSlice";
+import IconButton from "@mui/material/IconButton";
+import Drawer from "@mui/material/Drawer";
+import Button from "@mui/material/Button";
+import MapModal from "./MapModal";
 const MapDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const { circle, filterCir } = useSelector((state) => state.circles);
+  const { circle, filterCir, modalChat } = useSelector(
+    (state) => state.circles
+  );
   const PATH = [
     <path
       className={`fill-[#87CEFA] stroke-[#121212] duration-700 hover:fill-[#1E90FF]`}
@@ -90,6 +97,39 @@ const MapDetails = () => {
           </div>
         </>
       )}
+      <React.Fragment>
+        <Button
+          onClick={() => dispatch(toggleChatModal())}
+          sx={{
+            background: "#f3e7ff ",
+            borderRadius: "100%",
+            width: "60px",
+            height: "60px",
+            position: "fixed",
+            bottom: "100px",
+            right: "100px",
+            zIndex: "20",
+          }}
+        >
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="open drawer"
+            sx={{
+              ml: "1px",
+              flex: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <BsChatDots />
+          </IconButton>
+        </Button>
+        <Drawer open={modalChat} onClose={() => dispatch(toggleChatModal())}>
+          <MapModal id={id} className="w-1/2" />
+        </Drawer>
+      </React.Fragment>
     </>
   );
 };

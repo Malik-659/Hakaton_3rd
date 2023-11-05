@@ -30,7 +30,6 @@
       "price": 376908960,
       "countre": "Osh"
     },
-
     {
       "compani": "Департамент дорожного хозяйства при Министерство транспорта и коммуникаций Кыргызской Республики",
       "price": 8785506340,
@@ -61,7 +60,6 @@
       "price": 1000000000,
       "countre": "Jalal-Abad"
     },
-
     {
       "compani": "Открытое акционерное общество ‘Чакан ГЭС’",
       "price": 753155216,
@@ -92,7 +90,6 @@
       "price": 165012270,
       "countre": "Chü"
     },
-
     {
       "compani": "Учреждение «Таласское областное управление капитального строительства Департамента жилищно-гражданского строительства при Государственном агентстве архитектуры, строительства и жилищно-коммунального хозяйства при Правительстве Кыргызской Республики»",
       "price": 162513310,
@@ -124,8 +121,134 @@
       "countre": "Talas "
     }
   ],
-
-  "comments": [],
+  "comments": [
+    {
+      "comment": "dwqdwq",
+      "oblast": "KG-C",
+      "color": "red",
+      "id": 1
+    },
+    {
+      "comment": "dwqdwqdwqdwq",
+      "oblast": "KG-C",
+      "color": "orange",
+      "id": 2
+    },
+    {
+      "comment": "dqdwqdqw",
+      "oblast": "KG-C",
+      "color": "pink",
+      "id": 3
+    },
+    {
+      "comment": "dwdwqd",
+      "oblast": "KG-C",
+      "color": "orange",
+      "id": 4
+    },
+    {
+      "comment": "e21e12",
+      "oblast": "KG-C",
+      "color": "red",
+      "id": 5
+    },
+    {
+      "comment": "e21",
+      "oblast": "KG-Y",
+      "color": "pink",
+      "id": 6
+    },
+    {
+      "comment": "e21e",
+      "oblast": "KG-Y",
+      "color": "green",
+      "id": 7
+    },
+    {
+      "comment": "21e21",
+      "oblast": "KG-Y",
+      "color": "purple",
+      "id": 8
+    },
+    {
+      "comment": "21e21",
+      "oblast": "KG-Y",
+      "color": "blue",
+      "id": 9
+    },
+    {
+      "comment": "e21e21",
+      "oblast": "KG-O",
+      "color": "pink",
+      "id": 10
+    },
+    {
+      "comment": "12e21",
+      "oblast": "KG-O",
+      "color": "red",
+      "id": 11
+    },
+    {
+      "comment": "e21e1",
+      "oblast": "KG-O",
+      "color": "blue",
+      "id": 12
+    },
+    {
+      "comment": "e23e32",
+      "oblast": "KG-C",
+      "color": "green",
+      "id": 13
+    },
+    {
+      "comment": "e21e21e",
+      "oblast": "KG-Y",
+      "color": "blue",
+      "id": 14
+    },
+    {
+      "comment": "e21e21",
+      "oblast": "KG-O",
+      "color": "yellow",
+      "id": 15
+    },
+    {
+      "comment": "qwertyuiopoiuyhgtfrdsdfghjklkjhgfdsxcvbhnjkl;lkjhytrewsasdfghjkolp;plokijuhgfdszxcvbnmklkjhgf",
+      "oblast": "KG-Y",
+      "color": "green",
+      "id": 16
+    },
+    {
+      "comment": "qwer6t78908iuyjthrgefwdqsqazxcvbnm,.;poiuytrewqasdfghjkl.,hgfghjhgghgfdfghfdfg",
+      "oblast": "KG-Y",
+      "color": "green",
+      "id": 17
+    },
+    {
+      "comment": "qwerwuhjvkcbhwejvuhckev cuyfuicyfeywi3 fityef dyuwqv ixcu ctbwfe yucxfdtey fbvdteywvbfdteyvbxqituyb ftyud fxvtyue qwvdtyux",
+      "oblast": "KG-Y",
+      "color": "pink",
+      "id": 18
+    },
+    {
+      "comment": "sulaimansuliman",
+      "oblast": "KG-Y",
+      "color": "red",
+      "id": 19
+    },
+    {
+      "comment": "ssq",
+      "oblast": "KG-Y",
+      "color": "pink",
+      "id": 20
+    },
+    {
+      "comment": "qweruwbiuewhbiubdhbcihwchbwihcbihiwbicbiwhsoichiwoicohiwejhciweihciwhejchbwebibjewjibjchioewbjhciojhewijchb",
+      "oblast": "KG-Y",
+      "color": "red",
+      "id": 21
+    }
+  ],
   "users": [],
   "charts": [
     {
@@ -177,7 +300,6 @@
       "id": 8
     }
   ],
-
   "report": [
     {
       "id": 517467,
@@ -431,7 +553,6 @@
       ],
       "id": 10
     },
-
     {
       "code": "231104411108472 ",
       "org": "Талас областы Талас району Бердике Баатыр айылдык округдук кенешинин' Бердике баатыр айылдык окмоту",
@@ -540,7 +661,6 @@
       ],
       "id": 16
     },
-
     {
       "code": "231027409979536 ",
       "org": "Департамент транспорта и развития дорожно-транспортной инфраструктуры мэрии г. Бишкек ",
@@ -919,7 +1039,6 @@
       ],
       "id": 37
     },
-
     {
       "code": " 231024409311268 ",
       "org": "Тамчынский айыл окмоту Иссык-Кульского района",
