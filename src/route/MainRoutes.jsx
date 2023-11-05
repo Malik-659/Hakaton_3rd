@@ -10,6 +10,7 @@ import CreateTender from "../components/tenders/CreateTender";
 import Chart from "../components/chart/Chart";
 import Helps from "../pages/Helps";
 import HomePage from "../pages/HomePage/HomePage";
+import MapDetails from "../components/maps/MapDetails";
 
 const MainRoutes = () => {
   const ROUTES = [
@@ -17,6 +18,11 @@ const MainRoutes = () => {
       id: 1,
       path: "/map",
       element: <Map />,
+    },
+    {
+      id: 333,
+      path: "/map/:id",
+      element: <MapDetails />,
     },
     {
       id: 2,
