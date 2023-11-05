@@ -30,7 +30,7 @@ const Sidebar = () => {
         onClick={() => dispatch(toggleSidebar())}
         onKeyDown={() => dispatch(toggleSidebar())}
       >
-        <List sx={{ position: "fixed", paddingTop: 37 }}>
+        <List sx={{ position: "fixed", paddingTop: 43 }}>
           {["Lesson"].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
@@ -43,7 +43,7 @@ const Sidebar = () => {
           ))}
         </List>
         <List sx={{ position: "fixed", paddingTop: 20 }}>
-          {["Tenders", "Help", "Organizations"].map((text, index) => (
+          {["Tenders", "Help", "Organizations", "Map"].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
                 <ListItemIcon>
