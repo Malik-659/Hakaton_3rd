@@ -9,10 +9,11 @@ function Chart() {
   const { charts, oneChart } = useSelector((state) => state.charts);
   const dispatch = useDispatch();
   
+  console.log(oneChart);
 
   useEffect(() => {
     if (oneChart && oneChart.length > 0) {
-      const labels = oneChart.map((chart) => chart.company);
+      const labels = oneChart.map((chart) => chart.compani);
       const prikol = oneChart.map((chart) => chart.price);
       setChartData({
         labels: labels,

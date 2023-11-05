@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
-import { filterCircle, getCircle } from "../../store/circle/circleAction";
-import { BsChatDots } from "react-icons/bs";
-import { toggleChatModal } from "../../store/circle/circleSlice";
-import IconButton from "@mui/material/IconButton";
-import Drawer from "@mui/material/Drawer";
-import Button from "@mui/material/Button";
-import MapModal from "./MapModal";
+// import { filterCircle, getCircle } from "../../store/circle/circleAction";
+import { getOneChart } from "../../store/charts/chartsActions";
+import "./MapDetails.css"
+
 const MapDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -59,9 +56,12 @@ const MapDetails = () => {
     />,
   ];
   useEffect(() => {
-    dispatch(getCircle());
-    dispatch(filterCircle(id));
+    dispatch(getOneChart(id))
+    
+
   }, []);
+
+  
   return (
     <>
       {circle && (
@@ -86,14 +86,35 @@ const MapDetails = () => {
               )}
             </svg>
           </div>
-          <div>
-            {filterCir.map((item) => (
-              <div className="">
-                <h3>{item.compani}</h3>
-                <p>{item.price}</p>
-              </div>
-            ))}
-          </div>
+          <h1>{id.toUpperCase()}</h1>
+          <table>
+            <thead>
+              <tr>
+                <th>Название организации : </th>
+                <th>Сумма затрат : </th>
+                <th>Период : </th>
+              </tr>
+            </thead>
+            <tbody>
+            {/* {oneChart.sort((a,b)=>b-a).map((item)=>(
+              <tr>
+                <td style={{fontWeight:"bold"}}>{item.compani}</td>
+                <td>{item.price}</td>
+                <td>2023</td>
+              </tr>
+            ))} */}
+              {
+              oneChart.map((item) => (
+                <tr key={item.compani}>
+                  <td style={{ fontWeight: "bold" }}>{item.compani}</td>
+                  <td>{item.price}</td>
+                  <td>2023</td>
+                </tr>
+              ))
+              }
+            </tbody>
+          </table>
+
         </>
       )}
       <React.Fragment>

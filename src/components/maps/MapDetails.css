@@ -1,0 +1,41 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  thead {
+    background-color: #f2f2f2;
+  }
+  
+  th {
+    text-align: left;
+    padding: 10px;
+  }
+  
+  tbody {
+    background-color: #fff;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #ccc;
+  }
+  
+  td {
+    padding: 10px;
+  }
+  
+  /* Опциональные стили для колонок */
+  th:nth-child(1),
+  td:nth-child(1) {
+    width: 40%; /* Ширина первой колонки */
+  }
+  
+  th:nth-child(2),
+  td:nth-child(2) {
+    width: 35%; /* Ширина второй колонки */
+  }
+  
