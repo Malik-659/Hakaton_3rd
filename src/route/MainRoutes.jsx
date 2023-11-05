@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Map from "../components/maps/Map";
+import OrganizationsList from "../components/OrganizationsList/OrganizationsList";
 
 const MainRoutes = () => {
   const ROUTES = [
@@ -19,6 +20,11 @@ const MainRoutes = () => {
       path: "/register",
       element: "",
     },
+    {
+      id: 4,
+      path: "/organizations",
+      element: <OrganizationsList />
+    }
   ];
   return (
     <Routes>
