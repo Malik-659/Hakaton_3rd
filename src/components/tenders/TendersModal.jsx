@@ -27,11 +27,11 @@ const TendersModal = ({ tender }) => {
         width: "50%",
       }}
     >
-      <h2>ИНФОРМАЦИЯ О ВСКРЫТИИ</h2>
+      <h2>Информация о вскрытии :</h2>
       <p>Организация: {tenderDet.organize}</p>
       <p>Место на тендере: {tenderDet.place}ое</p>
-      <p>Цена предложения: {tenderDet.price_min}</p>
-      <p>Планируемая сумма: {tenderDet.price_org}</p>
+      <p>Цена предложения: {tenderDet.price_min} сом</p>
+      <p>Планируемая сумма: {tenderDet.price_org} сом</p>
     </div>
   );
 };
