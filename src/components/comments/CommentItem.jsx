@@ -13,7 +13,7 @@ const CommentItem = ({ item }) => {
         </div>
 
         <div>
-          <p className="line-clamp-1 text-lg text-gray-900 outline-none w-[400px]">
+          <p className="line-clamp-1 text-lg text-gray-900 outline-none ">
             {item.comment}
           </p>
         </div>
