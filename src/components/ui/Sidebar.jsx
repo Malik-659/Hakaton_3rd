@@ -17,20 +17,33 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
 import LoginIcon from "@mui/icons-material/Login";
 import HouseIcon from "@mui/icons-material/House";
+import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 
 const Sidebar = () => {
   const { sidebar } = useSelector((state) => state.comments);
   const dispatch = useDispatch();
   return (
-    <div className={sidebar ? "block" : "hidden"}>
+    <div>
       <Box
         sx={{ width: 250 }}
         role="presentation"
         onClick={() => dispatch(toggleSidebar())}
         onKeyDown={() => dispatch(toggleSidebar())}
       >
-        <List sx={{ position: "fixed", paddingTop: 24 }}>
-          {["Help", "Organizations"].map((text, index) => (
+        <List sx={{ position: "fixed", paddingTop: 43 }}>
+          {["Lesson"].map((text, index) => (
+            <ListItem key={text} disablePadding>
+              <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
+                <ListItemIcon>
+                  {index % 2 == 0 ? <AutoStoriesIcon /> : <PublicIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+        <List sx={{ position: "fixed", paddingTop: 20 }}>
+          {["Tenders", "Help", "Organizations", "Map"].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
                 <ListItemIcon>
@@ -41,30 +54,7 @@ const Sidebar = () => {
             </ListItem>
           ))}
         </List>
-        <List sx={{ position: "fixed", paddingTop: 12 }}>
-          {["Tenders", "Map"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
-                <ListItemIcon>
-                  {index % 2 == 0 ? <HandshakeIcon /> : <PublicIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-        <List sx={{ position: "fixed", paddingTop: 4 }}>
-          {["Home"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
-                <ListItemIcon>
-                  {index % 2 == 0 ? <HouseIcon /> : <Diversity3Icon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
+
         {checkUserLogin() ? (
           <List sx={{ position: "fixed", bottom: 80 }}>
             {["logout"].map((text, index) => (

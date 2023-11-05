@@ -59,6 +59,7 @@ const Diogram = () => {
         display: "flex",
         backgroundColor: "#e7fafd",
         paddingTop: "50px",
+        flexWrap: "wrap",
       }}
     >
       <div
@@ -67,6 +68,7 @@ const Diogram = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          flexWrap: "wrap",
         }}
       >
         <h2 style={{ fontSize: "2rem" }}>Статистика портала</h2>
@@ -78,6 +80,7 @@ const Diogram = () => {
             width: "300px",
             marginTop: "20px",
             fontWeight: "bold",
+            maxWidth: "100%",
           }}
           className="dio--nums"
         >
@@ -101,6 +104,7 @@ const Diogram = () => {
             width: "300px",
             marginTop: "20px",
             fontWeight: "bold",
+            maxWidth: "100%",
           }}
           className="dio--nums"
         >
@@ -117,7 +121,7 @@ const Diogram = () => {
           </div>
         </div>
       </div>
-      <div style={{ width: "55%" }} className="diogramm">
+      <div style={{ width: "60%" }} className="diogramm">
         <Line options={options} data={data} />
       </div>
     </div>

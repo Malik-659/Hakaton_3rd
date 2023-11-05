@@ -9,8 +9,13 @@ const circleSlice = createSlice({
     filterCir: [],
     oneCircle: null,
     status: "",
+    modalChat: false,
   },
-  reducers: {},
+  reducers: {
+    toggleChatModal: (state) => {
+      state.modalChat = !state.modalChat;
+    },
+  },
   extraReducers: (builders) => {
     builders
       .addCase(getCircle.pending, (state) => {
@@ -19,7 +24,7 @@ const circleSlice = createSlice({
       .addCase(getCircle.fulfilled, (state, action) => {
         state.loading = false;
         state.circle = action.payload;
-        console.log(state.circle);
+        // console.log(state.circle);
       })
       .addCase(getCircle.rejected, (state) => {
         state.loading = false;
@@ -32,4 +37,5 @@ const circleSlice = createSlice({
   },
 });
 
+export const { toggleChatModal } = circleSlice.actions;
 export default circleSlice.reducer;

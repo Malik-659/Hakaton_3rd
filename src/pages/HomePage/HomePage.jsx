@@ -15,8 +15,8 @@ const HomePage = () => {
     <>
       <div className="header w-300 flex justify-around items-center">
         <div data-aos="fade-up" data-aos-duration="3000">
-          <h1>Redux</h1>
-          <h1>закупки</h1>
+          <h1 className="h1-header">Redux</h1>
+          <h1 className="h1-header">закупки</h1>
 
           <button className="button type1">
             <span className="btn-txt">Узнать больше</span>

@@ -19,7 +19,7 @@ const TendersSearch = () => {
         <input
           type="text"
           placeholder="Поиск..."
-          className="search--input"
+          className="search--input bg-white border-2 rounded border-gray-950 w-56 h-12"
           onChange={(e) => {
             setSearchValue(e.target.value);
             dispatch(setSearchVal({ search: e.target.value }));

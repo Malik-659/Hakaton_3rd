@@ -31,23 +31,27 @@ const TenderItem = ({ tender }) => {
       style={{
         padding: "10px",
         display: "flex",
-        border: "1px solid purple",
+        border: "3px solid black",
         borderRadius: "5px",
-        backgroundColor: "#f3e7ff",
+        backgroundColor: "#edebf2",
         position: "relative",
+        fontSize: "20px", 
+        width:"100%", 
+        height:"300px", 
+        boxShadow:"rgba(149, 157, 165, 0.2) 0px 8px 24px",
       }}
     >
-      <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
-        <p>Код тендера: {tender.code}</p>
+      <div style={{ display: "flex", flexDirection: "column", gap: "5px", color: 'black'}}>
+        <p className="font-bold text-xl uppercase ">Код тендера: {tender.code}</p>
         <p>Организация: {tender.org}</p>
         <p>Дата добавления: {tender.adding_date} </p>
         <p>Дата окончания: {tender.data_end} </p>
         <p>Продукт: {tender.product} </p>
-        <p>Сумма: {tender.sum} сом</p>
+        <p className="font-bold text-lg ">Сумма: {tender.sum} сом</p>
         <p>Тип тендера: {tender.type}</p>
       </div>
       <div style={{ position: "absolute", bottom: "10px ", right: "10px" }}>
-        <button onClick={toggleMenu} style={{ color: "purple" }}>
+        <button onClick={toggleMenu} style={{ color: "blue" }}>
           Протокол вскрытия
           {modal && (
             <div>
