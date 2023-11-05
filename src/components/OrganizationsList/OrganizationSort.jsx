@@ -9,7 +9,7 @@ const OrganizationSort = () => {
 
     useEffect(() => {
         dispatch(setSortByRating(sortBy)); 
-        dispatch(getReports()); 
+        // dispatch(getReports()); 
     }, []);
 
     return (

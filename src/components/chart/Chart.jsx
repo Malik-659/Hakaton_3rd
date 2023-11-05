@@ -2,23 +2,18 @@ import React, { useEffect, useState } from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Pie } from "react-chartjs-2";
 import { useDispatch, useSelector } from "react-redux";
-import { getCharts } from "../../store/charts/chartsActions";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 function Chart() {
   const [chartData, setChartData] = useState({});
-  const { charts } = useSelector((state) => state.charts);
+  const { charts, oneChart } = useSelector((state) => state.charts);
   const dispatch = useDispatch();
+  
 
   useEffect(() => {
-    dispatch(getCharts());
-  }, []);
-  console.log(chartData);
-
-  useEffect(() => {
-    if (charts && charts.length > 0) {
-      const labels = charts.map((chart) => chart.company);
-      const prikol = charts.map((chart) => parseInt(chart.spandings));
+    if (oneChart && oneChart.length > 0) {
+      const labels = oneChart.map((chart) => chart.company);
+      const prikol = oneChart.map((chart) => chart.price);
       setChartData({
         labels: labels,
         datasets: [
@@ -38,12 +33,11 @@ function Chart() {
         ],
       });
     }
-  }, [charts]);
-  console.log(chartData);
+  }, [oneChart]);
   const options = {};
   return (
-    <div>
-      <h2>Круговая диаграмма</h2>
+    <div className="w-2/5 p-4 mr-6 h-11/12 rounded-lg border-2 border-[#9bcbfb] bg-[#b6f2fb80]">
+      <h2 className="text-center">Круговая диаграмма</h2>
       <div style={{ width: "500px" }}>
         {chartData.labels && <Pie data={chartData} options={options} />}
       </div>

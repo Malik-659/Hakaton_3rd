@@ -3,15 +3,16 @@ import { Route, Routes } from "react-router-dom";
 import Map from "../components/maps/Map";
 import Login from "../components/auth/Login";
 import Register from "../components/auth/Register";
-import Camera from "../components/auth/Camera";
 import ActiveCode from "../components/auth/ActiveCode";
-import OrganizationsList from "../components/OrganizationsList/OrganizationsList";
+import OrganizationPage from "../components/OrganizationsList/OrganizationPage";
 import TendersPage from "../pages/TendersPage";
 import CreateTender from "../components/tenders/CreateTender";
 import Chart from "../components/chart/Chart";
 import Helps from "../pages/Helps";
 import HomePage from "../pages/HomePage/HomePage";
+import Diogram from "../components/diogram/Diogram";
 import MapDetails from "../components/maps/MapDetails";
+import Lesson from "../components/lesson/Lesson";
 
 const MainRoutes = () => {
   const ROUTES = [
@@ -36,11 +37,10 @@ const MainRoutes = () => {
       element: <Register />,
     },
     { id: 776, path: "/activeCode", element: <ActiveCode /> },
-    { id: 778, path: "/webcam", element: <Camera /> },
     {
       id: 4,
       path: "/organizations",
-      element: <OrganizationsList />,
+      element: <OrganizationPage />,
     },
     {
       id: 5,
@@ -63,9 +63,19 @@ const MainRoutes = () => {
       element: <Chart />,
     },
     {
+      id: 26,
+      path: "/dio",
+      element: <Diogram />,
+    },
+    {
       id: 500,
-      path: "/helps",
+      path: "/help",
       element: <Helps />,
+    },
+    {
+      id: 501,
+      path: "/lesson",
+      element: <Lesson />,
     },
   ];
   return (
