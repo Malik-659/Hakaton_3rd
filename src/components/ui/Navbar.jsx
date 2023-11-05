@@ -14,6 +14,7 @@ import logo from "../../assets/icons/logo.png";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSidebar } from "../../store/comments/commentSlice";
 import Sidebar from "./Sidebar";
+import { useNavigate } from "react-router-dom";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -60,6 +61,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const Navbar = () => {
   const { sidebar } = useSelector((state) => state.comments);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
@@ -73,9 +75,8 @@ const Navbar = () => {
                 <IconButton
                   size="large"
                   edge="start"
-                  color="inherit"
                   aria-label="open drawer"
-                  sx={{ mr: 2 }}
+                  sx={{ mr: 2, color: "white" }}
                 >
                   <MenuIcon />
                 </IconButton>
@@ -84,30 +85,20 @@ const Navbar = () => {
                 <Sidebar />
               </Drawer>
             </React.Fragment>
-            <img className="w-36 h-18 mr-4" src={logo} alt="logo" />
+            <img
+              onClick={() => {
+                navigate("/");
+              }}
+              className="w-36 h-18 mr-4 cursor-pointer"
+              src={logo}
+              alt="logo"
+            />
             <Typography
               variant="h6"
               noWrap
               component="div"
               sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
             ></Typography>
-            <Search
-              sx={{
-                background: "#e4e4e4",
-                transition: "background-color 0.3s",
-                "&:hover": {
-                  background: "#c4c4c4 ",
-                },
-              }}
-            >
-              <SearchIconWrapper>
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Search…"
-                inputProps={{ "aria-label": "search" }}
-              />
-            </Search>
           </Toolbar>
         </AppBar>
       </Box>
