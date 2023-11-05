@@ -6,6 +6,7 @@ import PaginationControlled from "../components/tenders/TendersPagination";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Diogram from "../components/diogram/Diogram";
 
 const TendersPage = () => {
   useEffect(() => {
@@ -13,11 +14,18 @@ const TendersPage = () => {
   }, []);
 
   return (
-    <div style={{ width: "70%", margin: "50px auto" }}>
+    <div style={{ width: "70%", margin: "50px auto", padding: "20px" }}>
+      <Diogram />
       <h2
         data-aos="fade-down"
         data-aos-duration="2000"
-        style={{ textAlign: "center", fontSize: "42px", letterSpacing: "1px" , color: "black"}}
+        style={{
+          textAlign: "center",
+          fontSize: "36px",
+          letterSpacing: "1px",
+          marginTop: "50px",
+          color: "black",
+        }}
       >
         СПИСОК ТЕНДЕРОВ
       </h2>
@@ -26,6 +34,7 @@ const TendersPage = () => {
           marginTop: "50px",
           display: "flex",
           justifyContent: "space-between",
+          flexWrap: "wrap",
         }}
       >
         <div data-aos="fade-up-right" data-aos-duration="2000">

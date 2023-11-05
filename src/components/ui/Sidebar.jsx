@@ -23,14 +23,14 @@ const Sidebar = () => {
   const { sidebar } = useSelector((state) => state.comments);
   const dispatch = useDispatch();
   return (
-    <div className={sidebar ? "block" : "hidden"}>
+    <div>
       <Box
         sx={{ width: 250 }}
         role="presentation"
         onClick={() => dispatch(toggleSidebar())}
         onKeyDown={() => dispatch(toggleSidebar())}
       >
-        <List sx={{ position: "fixed", paddingTop: 32 }}>
+        <List sx={{ position: "fixed", paddingTop: 43 }}>
           {["Lesson"].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
@@ -43,7 +43,7 @@ const Sidebar = () => {
           ))}
         </List>
         <List sx={{ position: "fixed", paddingTop: 20 }}>
-          {["Help", "Organizations"].map((text, index) => (
+          {["Tenders", "Help", "Organizations", "Map"].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
                 <ListItemIcon>

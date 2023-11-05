@@ -20,3 +20,7 @@ body {
 * {
   font-family: "Archivo+Black", sans-serif;
 }
+
+#root {
+  background-color: white;
+}

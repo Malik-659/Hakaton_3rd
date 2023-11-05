@@ -70,9 +70,11 @@ const OrganizationsList = () => {
               >
                 <div>
                   <p>Название организации</p>
-                  <h3 className={s.cardTitle}>{report.AccountName}</h3>
+                  <h3 style={{ color: "#230571" }} className={s.cardTitle}>
+                    {report.AccountName}
+                  </h3>
                   <p>Сумма</p>
-                  <h3>{report.Sum} сом</h3>
+                  <h3 style={{ color: "#230571" }}>{report.Sum} сом</h3>
                 </div>
                 <div className={s.info}>
                   <div>

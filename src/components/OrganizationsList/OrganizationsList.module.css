@@ -18,7 +18,7 @@
   text-align: center;
   margin-top: 4rem;
   font-weight: bold;
-  color: #7c7474 !important;
+  color: #000000 !important;
   visibility: visible !important;
 }
 
@@ -56,7 +56,7 @@ span {
   padding: 0.5rem;
   justify-content: space-around;
   align-items: center;
-  border: 2px solid rgb(75, 202, 168);
+  border: 3px solid black;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background-color: #fff;
 }
