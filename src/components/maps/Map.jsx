@@ -50,7 +50,7 @@ const Map = () => {
           <path onMouseOver={()=>setHoveredCountry("Batken")}
           onMouseOut={()=> setHoveredCountry('')}
             onClick={(e) => {
-              navigate(`/map/${e.target.id}`);
+              navigate(`/map/Batken`);
             }}
             className={`fill-[#87CEFA] stroke-[#121212] duration-700 hover:fill-[#1E90FF]`}           
             onMouseEnter={() => handleRegionMouseToggle("Batken", true)}
@@ -62,7 +62,7 @@ const Map = () => {
           <path onMouseOver={()=>setHoveredCountry("Chu")}
           onMouseOut={()=> setHoveredCountry('')}
             onClick={(e) => {
-              navigate(`/map/${e.target.id}`);
+              navigate(`/map/Chu`);
             }}
             className={`fill-[#88adf3] stroke-[#121212] duration-700 hover:fill-[#4d88f6]`}
             onMouseEnter={() => handleRegionMouseToggle("Chu", true)}
@@ -74,7 +74,7 @@ const Map = () => {
           <path onMouseOver={()=>setHoveredCountry("JalalAbad")}
           onMouseOut={()=> setHoveredCountry('')}
             onClick={(e) => {
-              navigate(`/map/${e.target.id}`);
+              navigate(`/map/JalalAbad`);
             }}
             className={`fill-[#56aade] stroke-[#121212] duration-700 hover:fill-[#3986e4]`}
             onMouseEnter={() => handleRegionMouseToggle("JalalAbad", true)}
@@ -86,7 +86,7 @@ const Map = () => {
           <path onMouseOver={()=>setHoveredCountry("Naryn")}
           onMouseOut={()=> setHoveredCountry('')}
             onClick={(e) => {
-              navigate(`/map/${e.target.id}`);
+              navigate(`/map/Naryn`);
             }}
             className={`fill-[#61b9ef] stroke-[#121212] duration-700 hover:fill-[#1E90FF]`}
             onMouseEnter={() => handleRegionMouseToggle("Naryn", true)}
@@ -98,7 +98,7 @@ const Map = () => {
           <path onMouseOver={()=>setHoveredCountry("Osh")}
           onMouseOut={()=> setHoveredCountry('')}
             onClick={(e) => {
-              navigate(`/map/${e.target.id}`);
+              navigate(`/map/Osh`);
             }}
             className={`fill-[#50a2e5] stroke-[#121212] duration-700 hover:fill-[#487be3]`}
             onMouseEnter={() => handleRegionMouseToggle("Osh", true)}
@@ -110,7 +110,7 @@ const Map = () => {
           <path onMouseOver={()=>setHoveredCountry("Talas")}
           onMouseOut={()=> setHoveredCountry('')}
             onClick={(e) => {
-              navigate(`/map/${e.target.id}`);
+              navigate(`/map/Talas`);
             }}
             className={`fill-[#87CEFA] stroke-[#121212] duration-700 hover:fill-[#1E90FF]`}
             onMouseEnter={() => handleRegionMouseToggle("Talas", true)}
@@ -122,7 +122,7 @@ const Map = () => {
           <path onMouseOver={()=>setHoveredCountry("YsykKol")}
           onMouseOut={()=> setHoveredCountry('')}
             onClick={(e) => {
-              navigate(`/map/${e.target.id}`);
+              navigate(`/map/YsykKol`);
             }}
             className={`fill-[#64aedc] stroke-[#121212] duration-700 hover:fill-[#5d93f6]`}
             onMouseEnter={() => handleRegionMouseToggle("YsykKol", true)}
