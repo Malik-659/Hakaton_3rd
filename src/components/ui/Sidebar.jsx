@@ -46,8 +46,11 @@ const Sidebar = () => {
                   component={Link}
                   to={
                     text.toLowerCase() === "logout"
-                      ? () => logout()
+                      ? "#"
                       : `/${text.toLowerCase()}`
+                  }
+                  onClick={
+                    text.toLowerCase() === "logout" ? () => logout() : null
                   }
                 >
                   <ListItemIcon>

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { clearStatusState } from "../../store/users/usersSlice";
 import { registerUser } from "../../store/users/usersActions";
 import { updateToken } from "../../helpers/function";
+import Camera from "./Camera";
 
 const Register = () => {
   const [user, setUser] = useState({
@@ -13,6 +14,7 @@ const Register = () => {
     password: "",
     passwordConfirm: "",
   });
+  const [openModal, setOpenModal] = useState(false);
 
   const { loading, status } = useSelector((state) => state.users);
 
@@ -46,17 +48,9 @@ const Register = () => {
               </button>
             </>
           ) : (
-            <section className="bg-white">
+            <section className="bg-white flex w-full">
               <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
-                <aside className="relative block h-16 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6">
-                  <img
-                    alt="Pattern"
-                    src="https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                    className="absolute inset-0 h-full w-full object-cover"
-                  />
-                </aside>
-
-                <main className="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
+                <main className=" flex items-center justify-center ml-8 px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
                   <div className="max-w-xl lg:max-w-3xl">
                     <h2 className="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
                       Регистрация...
@@ -66,7 +60,9 @@ const Register = () => {
                       "Добро пожаловать! Пожалуйста, зарегистрируйтесь, чтобы
                       начать использовать наш сервис."
                     </p>
-
+                    <button onClick={() => setOpenModal(true)}>
+                      Заполнить данные по паспорту
+                    </button>
                     <form action="#" className="mt-8 grid grid-cols-6 gap-6">
                       <div className="col-span-6 sm:col-span-3">
                         <label
@@ -190,56 +186,9 @@ const Register = () => {
                     </form>
                   </div>
                 </main>
+                <div>{openModal && <Camera setOpenModal={setOpenModal} />}</div>
               </div>
             </section>
-            // <div>
-            //   <h1>Регистрация</h1>
-            //   <input
-            //     placeholder="email"
-            //     type="text"
-            //     onChange={(e) => {
-            //       setUser({ ...user, email: e.target.value });
-            //     }}
-            //   />
-            //   <input
-            //     placeholder="first name"
-            //     type="text"
-            //     onChange={(e) => {
-            //       setUser({ ...user, firstName: e.target.value });
-            //     }}
-            //   />
-            //   <input
-            //     placeholder="last name"
-            //     type="text"
-            //     onChange={(e) => {
-            //       setUser({ ...user, lastName: e.target.value });
-            //     }}
-            //   />
-            //   <input
-            //     placeholder="password"
-            //     type="password"
-            //     onChange={(e) => {
-            //       setUser({ ...user, password: e.target.value });
-            //     }}
-            //   />
-            //   <input
-            //     placeholder="password confirm"
-            //     type="password"
-            //     onChange={(e) => {
-            //       setUser({ ...user, passwordConfirm: e.target.value });
-            //     }}
-            //   />
-            //   <button
-            //     onClick={() => {
-            //       handleClick();
-            //     }}
-            //   >
-            //     Создать аккаунт
-            //   </button>
-            //   <p>
-            //     Уже есть аккаунт? <Link to="/login">Войти</Link>
-            //   </p>
-            // </div>
           )}
         </>
       )}

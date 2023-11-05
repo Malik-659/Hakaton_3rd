@@ -22,4 +22,5 @@ const chartsSlice = createSlice({
       });
   },
 });
+
 export default chartsSlice.reducer;

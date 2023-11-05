@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { setSearchVal } from "../../store/reports/reportsSlice";
+import { getReports } from "../../store/reports/reportsActions";
 
 const OrganizationSearch = () => {
+  const {search} = useSelector((state) => state.reports);
+  
   const [searchValue, setSearchValue] = useState('');
   const dispatch = useDispatch();
-
-//   useEffect(() => {
-//     if(!search) {
-//       setSearchValue('');
-//     };
-//   }, [search]);
+  useEffect(() => {
+    if(!search) {
+      setSearchValue('');
+    };
+  }, [search]);
 
   return (
     <div className="relative w-45 border border-gray-500 rounded">
@@ -27,10 +30,10 @@ const OrganizationSearch = () => {
         className="w-full rounded-md py-2.5 pe-10 shadow-sm sm:text-sm  opacity-90 dark:bg-pink-500 pl-2"
       />
 
-      <span className="absolute inset-y-0 end-0 grid w-10 place-content-center">
+      <span className="absolute inset-y-0 end-0 grid w-10 place-content-center bg-blue-500 ">
         <button onClick={() => {
-          //dispatch(setSearchVal({ search: searchValue }));
-        //   dispatch(getProducts());
+          dispatch(setSearchVal({ search: searchValue }));
+          dispatch(getReports());
         }} type="button" className="text-white hover:text-white">
           <span className="sr-only">Search</span>
 

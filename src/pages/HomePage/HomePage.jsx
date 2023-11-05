@@ -14,31 +14,33 @@ const HomePage = () => {
   return (
     <>
       <div className="header w-300 flex justify-around items-center">
-        <div data-aos="fade-up"
-     data-aos-duration="3000">
+        <div data-aos="fade-up" data-aos-duration="3000">
           <h1>Redux</h1>
           <h1>закупки</h1>
 
-          <button class="button type1">
-            <span class="btn-txt">Узнать больше</span>
+          <button className="button type1">
+            <span className="btn-txt">Узнать больше</span>
           </button>
         </div>
         <div>
-          <img src={headerImage} alt="headerImage" data-aos="fade-up"
-     data-aos-duration="3000" />
+          <img
+            src={headerImage}
+            alt="headerImage"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          />
         </div>
       </div>
 
       <section className="flex flex-row ml-56 mr-56 items-center mb-16">
         <div>
           <h1
-          data-aos="fade-up"
-          data-aos-duration="3000"
+            data-aos="fade-up"
+            data-aos-duration="3000"
             className="text-[#b6f2fb] font-bold text-3xl mt-16"
           >
             О нас
           </h1>
-
           <p
             data-aos="fade-up"
             data-aos-duration="3000"
@@ -51,8 +53,8 @@ const HomePage = () => {
             perferendis! Assumenda autem esse officia aliquam et.
           </p>
           <div
-           data-aos="fade-up"
-           data-aos-duration="3000"
+            data-aos="fade-up"
+            data-aos-duration="3000"
             className="w-96 h-48 bg-[#b6f2fb] border rounded-xl p-6 mt-8 border-l-8 text-xl"
           >
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi
@@ -64,53 +66,45 @@ const HomePage = () => {
           src={AboutUs}
           alt=""
           data-aos="fade-up"
-     data-aos-duration="3000"
+          data-aos-duration="3000"
           className="w-96 h-96 p-10"
         />
       </section>
       <div className="card-block ">
-        <div class="cards-list mt-24" > 
-          <div class="card 1" data-aos="fade-up" data-aos-duration="3000">
-            <div class="card_image">
+        <div className="cards-list mt-24">
+          <div className="card 1" data-aos="fade-up" data-aos-duration="3000">
+            <div className="card_image">
               {" "}
               <img src="https://cdn-icons-gif.flaticon.com/11259/11259503.gif" />{" "}
             </div>
-            <div class="card_title title-white">
+            <div className="card_title title-white">
               <p>поставщики</p>
             </div>
           </div>
 
-          <div
-            class="card 2"
-            data-aos="fade-up"
-     data-aos-duration="3000"
-          >
-            <div class="card_image">
+          <div className="card 2" data-aos="fade-up" data-aos-duration="3000">
+            <div className="card_image">
               <img src="https://cdn-icons-gif.flaticon.com/6569/6569161.gif" />
             </div>
-            <div class="card_title title-white">
+            <div className="card_title title-white">
               <p>закупающие организации</p>
             </div>
           </div>
 
-          <div
-            class="card 3"
-            data-aos="fade-up"
-            data-aos-duration="3000"
-          >
-            <div class="card_image">
+          <div className="card 3" data-aos="fade-up" data-aos-duration="3000">
+            <div className="card_image">
               <img src="https://cdn-icons-gif.flaticon.com/9822/9822035.gif" />
             </div>
-            <div class="card_title">
+            <div className="card_title">
               <p>тендеры</p>
             </div>
           </div>
 
-          <div class="card 4" data-aos="fade-up" data-aos-duration="3000">
-            <div class="card_image">
+          <div className="card 4" data-aos="fade-up" data-aos-duration="3000">
+            <div className="card_image">
               <img src="https://cdn-icons-gif.flaticon.com/11616/11616297.gif" />
             </div>
-            <div class="card_title title-black">
+            <div className="card_title title-black">
               <p>бюджет</p>
             </div>
           </div>
