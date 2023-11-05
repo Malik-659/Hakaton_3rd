@@ -30,36 +30,24 @@ const Sidebar = () => {
         onClick={() => dispatch(toggleSidebar())}
         onKeyDown={() => dispatch(toggleSidebar())}
       >
-        <List sx={{ position: "fixed", paddingTop: 24 }}>
-          {["Help", "Organizations"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
-                <ListItemIcon>
-                  {index % 2 == 0 ? <HelpIcon /> : <Diversity3Icon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-        <List sx={{ position: "fixed", paddingTop: 12 }}>
-          {["Tenders", "Map"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
-                <ListItemIcon>
-                  {index % 2 == 0 ? <HandshakeIcon /> : <PublicIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-        <List sx={{ position: "fixed", paddingTop: 36 }}>
+        <List sx={{ position: "fixed", paddingTop: 32 }}>
           {["Lesson"].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
                 <ListItemIcon>
                   {index % 2 == 0 ? <AutoStoriesIcon /> : <PublicIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+        <List sx={{ position: "fixed", paddingTop: 20 }}>
+          {["Help", "Organizations"].map((text, index) => (
+            <ListItem key={text} disablePadding>
+              <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
+                <ListItemIcon>
+                  {index % 2 == 0 ? <HelpIcon /> : <Diversity3Icon />}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
