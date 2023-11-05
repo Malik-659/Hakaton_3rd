@@ -42,7 +42,7 @@ const MainRoutes = () => {
     },
     {
       id: 5,
-      path: "/",
+      path: "/home",
       element: <HomePage />,
     },
     {
@@ -62,7 +62,7 @@ const MainRoutes = () => {
     },
     {
       id: 500,
-      path: "/helps",
+      path: "/help",
       element: <Helps />,
     },
   ];
