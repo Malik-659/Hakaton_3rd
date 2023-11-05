@@ -23,7 +23,7 @@ const Sidebar = () => {
   const { sidebar } = useSelector((state) => state.comments);
   const dispatch = useDispatch();
   return (
-    <div className={sidebar ? "block" : "hidden"}>
+    <div>
       <Box
         sx={{ width: 250 }}
         role="presentation"

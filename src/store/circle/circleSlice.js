@@ -9,8 +9,13 @@ const circleSlice = createSlice({
     filterCir: [],
     oneCircle: null,
     status: "",
+    modalChat: false,
   },
-  reducers: {},
+  reducers: {
+    toggleChatModal: (state) => {
+      state.modalChat = !state.modalChat;
+    },
+  },
   extraReducers: (builders) => {
     builders
       .addCase(getCircle.pending, (state) => {
@@ -32,4 +37,5 @@ const circleSlice = createSlice({
   },
 });
 
+export const { toggleChatModal } = circleSlice.actions;
 export default circleSlice.reducer;
