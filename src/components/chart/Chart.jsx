@@ -36,8 +36,8 @@ function Chart() {
   }, [oneChart]);
   const options = {};
   return (
-    <div className="w-1/3 mr-6 h-11/12 rounded-lg border-2 border-[#9bcbfb] bg-[#b6f2fb80]">
-      <h2>Круговая диаграмма</h2>
+    <div className="w-2/5 p-4 mr-6 h-11/12 rounded-lg border-2 border-[#9bcbfb] bg-[#b6f2fb80]">
+      <h2 className="text-center">Круговая диаграмма</h2>
       <div style={{ width: "500px" }}>
         {chartData.labels && <Pie data={chartData} options={options} />}
       </div>
