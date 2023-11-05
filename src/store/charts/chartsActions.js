@@ -7,9 +7,13 @@ export const getCharts = createAsyncThunk("charts/getCharts", async () => {
   return data;
 });
 
-export const getOneChart = createAsyncThunk('charts/getOneChart', 
-async(countre)=>{
-  let data = getCharts();
-  let filteredData = data.filter((item) => item.countre === countre);
-  return filteredData;
-})
+export const getOneChart = createAsyncThunk('charts/getOneChart', async (countre, {getState, dispatch}) => {
+  try {
+  const data = await dispatch(getCharts())
+const res = data.payload.filter((item) => item.countre === countre)
+    return res; 
+  } catch (error) {
+    console.error('Ошибка при получении данных:', error);
+    throw error; 
+  }
+});
