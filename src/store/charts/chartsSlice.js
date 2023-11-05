@@ -6,7 +6,7 @@ const chartsSlice = createSlice({
   initialState: {
     loading: false,
     charts: [],
-    oneChart: []
+    oneChart: [],
   },
   reducers: {},
   extraReducers: (builder) => {
@@ -21,10 +21,10 @@ const chartsSlice = createSlice({
       .addCase(getCharts.rejected, (state) => {
         state.loading = false;
       })
-      .addCase(getOneChart, (state, action)=>{
+      .addCase(getOneChart.fulfilled, (state, action) => {
         state.loading = false;
         state.oneChart = action.payload.data;
-      })
+      });
   },
 });
 

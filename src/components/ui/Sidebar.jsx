@@ -17,6 +17,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
 import LoginIcon from "@mui/icons-material/Login";
 import HouseIcon from "@mui/icons-material/House";
+import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 
 const Sidebar = () => {
   const { sidebar } = useSelector((state) => state.comments);
@@ -47,6 +48,18 @@ const Sidebar = () => {
               <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
                 <ListItemIcon>
                   {index % 2 == 0 ? <HandshakeIcon /> : <PublicIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+        <List sx={{ position: "fixed", paddingTop: 36 }}>
+          {["Lesson"].map((text, index) => (
+            <ListItem key={text} disablePadding>
+              <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
+                <ListItemIcon>
+                  {index % 2 == 0 ? <AutoStoriesIcon /> : <PublicIcon />}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>

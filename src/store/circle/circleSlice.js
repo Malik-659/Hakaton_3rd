@@ -19,7 +19,7 @@ const circleSlice = createSlice({
       .addCase(getCircle.fulfilled, (state, action) => {
         state.loading = false;
         state.circle = action.payload;
-        console.log(state.circle);
+        // console.log(state.circle);
       })
       .addCase(getCircle.rejected, (state) => {
         state.loading = false;
