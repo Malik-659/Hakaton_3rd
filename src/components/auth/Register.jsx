@@ -5,6 +5,7 @@ import { clearStatusState } from "../../store/users/usersSlice";
 import { registerUser } from "../../store/users/usersActions";
 import { updateToken } from "../../helpers/function";
 import Camera from "./Camera";
+import Error from "./Error";
 
 const Register = () => {
   const [user, setUser] = useState({
@@ -37,16 +38,7 @@ const Register = () => {
       ) : (
         <>
           {status ? (
-            <>
-              <h1>Что-то пошло не так...</h1>
-              <button
-                onClick={() => {
-                  dispatch(clearStatusState());
-                }}
-              >
-                Назад
-              </button>
-            </>
+            <Error />
           ) : (
             <section className="bg-white flex w-full">
               <div className="lg:grid lg:min-h-screen lg:grid-cols-12">

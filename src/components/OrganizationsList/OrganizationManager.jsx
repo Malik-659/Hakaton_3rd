@@ -4,7 +4,7 @@ import OrganizationSort from "./OrganizationSort";
 
 const OrganizationManager = () => {
   return (
-    <div>
+    <div className="w-1/2 mx-auto">
       <OrganizationSearch />
       <OrganizationSort />
     </div>
