@@ -37,7 +37,7 @@ const options = {
   },
 };
 
-const labels = ["2018", "2019", "2020", "2021", "2022"];
+const labels = ["2018 год", "2019 год", "2020 год", "2021 год", "2022 год"];
 
 export const data = {
   labels,
