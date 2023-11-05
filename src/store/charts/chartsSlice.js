@@ -1,11 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getCharts } from "./chartsActions";
+import { getCharts, getOneChart } from "./chartsActions";
 
 const chartsSlice = createSlice({
   name: "charts",
   initialState: {
     loading: false,
     charts: [],
+    oneChart: []
   },
   reducers: {},
   extraReducers: (builder) => {
@@ -19,7 +20,18 @@ const chartsSlice = createSlice({
       })
       .addCase(getCharts.rejected, (state) => {
         state.loading = false;
-      });
+      })
+      .addCase(getOneChart.pending, (state)=>{
+        state.loading = true;
+      })
+      .addCase(getOneChart.fulfilled, (state, action)=>{
+        state.loading = false;
+        state.oneChart = action.payload;
+      })
+      .addCase(getOneChart.rejected, (state)=>{
+        state.loading = false;
+      })
   },
 });
+
 export default chartsSlice.reducer;

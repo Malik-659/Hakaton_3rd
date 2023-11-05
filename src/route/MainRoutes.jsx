@@ -11,12 +11,22 @@ import Chart from "../components/chart/Chart";
 import Helps from "../pages/Helps";
 import HomePage from "../pages/HomePage/HomePage";
 
+import Diogram from "../components/diogram/Diogram";
+
+import MapDetails from "../components/maps/MapDetails";
+
+
 const MainRoutes = () => {
   const ROUTES = [
     {
       id: 1,
       path: "/map",
       element: <Map />,
+    },
+    {
+      id: 333,
+      path: "/map/:id",
+      element: <MapDetails />,
     },
     {
       id: 2,
@@ -36,7 +46,7 @@ const MainRoutes = () => {
     },
     {
       id: 5,
-      path: "/",
+      path: "/home",
       element: <HomePage />,
     },
     {
@@ -55,8 +65,13 @@ const MainRoutes = () => {
       element: <Chart />,
     },
     {
+      id: 26,
+      path: "/dio",
+      element: <Diogram />,
+    },
+    {
       id: 500,
-      path: "/helps",
+      path: "/help",
       element: <Helps />,
     },
   ];
