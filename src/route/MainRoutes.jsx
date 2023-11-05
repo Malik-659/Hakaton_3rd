@@ -15,7 +15,6 @@ import Diogram from "../components/diogram/Diogram";
 
 import MapDetails from "../components/maps/MapDetails";
 
-
 const MainRoutes = () => {
   const ROUTES = [
     {
@@ -46,7 +45,7 @@ const MainRoutes = () => {
     },
     {
       id: 5,
-      path: "/home",
+      path: "/",
       element: <HomePage />,
     },
     {
