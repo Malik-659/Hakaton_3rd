@@ -18,6 +18,8 @@ import HowToRegIcon from "@mui/icons-material/HowToReg";
 import LoginIcon from "@mui/icons-material/Login";
 import HouseIcon from "@mui/icons-material/House";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
+import logo from "../../assets/icons/redux-removebg-preview.png";
+import TelegramIcon from "@mui/icons-material/Telegram";
 
 const Sidebar = () => {
   const { sidebar } = useSelector((state) => state.comments);
@@ -30,6 +32,7 @@ const Sidebar = () => {
         onClick={() => dispatch(toggleSidebar())}
         onKeyDown={() => dispatch(toggleSidebar())}
       >
+        <img src={logo} alt="logo" className="w-48 h-48 ml-6 -mb-16" />
         <List sx={{ position: "fixed", paddingTop: 43 }}>
           {["Lesson"].map((text, index) => (
             <ListItem key={text} disablePadding>
@@ -42,7 +45,8 @@ const Sidebar = () => {
             </ListItem>
           ))}
         </List>
-        <List sx={{ position: "fixed", paddingTop: 20 }}>
+
+        <List sx={{ position: "fixed", paddingTop: 13 }}>
           {["Tenders", "Help", "Organizations", "Map"].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
@@ -53,6 +57,18 @@ const Sidebar = () => {
               </ListItemButton>
             </ListItem>
           ))}
+          <ListItem key="Telegram" disablePadding>
+            <ListItemButton
+              component="a"
+              href="https://web.telegram.org/k/#@ReduxGosZap_Bot"
+              target="_blank"
+            >
+              <ListItemIcon>
+                <TelegramIcon />
+              </ListItemIcon>
+              <ListItemText primary="Telegram" />
+            </ListItemButton>
+          </ListItem>
         </List>
 
         {checkUserLogin() ? (
@@ -92,16 +108,7 @@ const Sidebar = () => {
             ))}
           </List>
         )}
-        <a
-          style={{ position: "fixed", top: "70px" }}
-          href="https://web.telegram.org/k/#@ReduxGosZap_Bot"
-          target="_blank"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/87/87413.png"
-            className=" h-[50px] cursor-pointer object-cover w-[50px]"
-          />
-        </a>
+      
       </Box>
     </div>
   );

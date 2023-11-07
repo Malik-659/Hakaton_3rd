@@ -15,7 +15,7 @@ const OrganizationSearch = () => {
   }, [search]);
 
   return (
-    <div className="relative w-45 border border-gray-500 rounded">
+    <div className="relative w-45 border border-gray-500 rounded mt-12">
       <label htmlFor="Search" className="sr-only">
         {" "}
         Search{" "}
@@ -27,7 +27,7 @@ const OrganizationSearch = () => {
         type="text"
         id="Search"
         placeholder="Поиск"
-        className="w-full rounded-md py-2.5 pe-10 shadow-sm sm:text-sm  opacity-90 dark:bg-pink-500 pl-2"
+        className="w-full rounded-md py-2.5 pe-10 shadow-sm sm:text-sm  opacity-90 dark:bg-white pl-2"
       />
 
       <span className="absolute inset-y-0 end-0 grid w-10 place-content-center bg-blue-500 ">
