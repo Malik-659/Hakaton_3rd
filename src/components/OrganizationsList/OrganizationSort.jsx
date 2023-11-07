@@ -13,7 +13,7 @@ const OrganizationSort = () => {
     }, []);
 
     return (
-        <select className="relative w-50 border border-gray-500 rounded p-2.5" onChange={(e) => {
+        <select className="relative w-50 border bg-white mt-9 ml-64 border-gray-500 rounded p-2.5" onChange={(e) => {
             setSortBy(e.target.value);
             dispatch(getReports())
         }} value={sortBy}>
